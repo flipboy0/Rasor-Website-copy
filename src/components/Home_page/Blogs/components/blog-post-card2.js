@@ -4,11 +4,12 @@ import './blog-post-card2.css';
 
 const BlogPostCard2 = (props) => {
   return (
-    <a href={props.link} className={`blog-post-card2-blog-post-card ${props.rootClassName}`}>
+    <div className={`blog-post-card2-blog-post-card ${props.rootClassName} relative m-3`}>
       <img
         alt={props.image_alt}
         src={props.image_src}
         className="blog-post-card2-image"
+        style={{maxWidth: '100px'}}
       />
       <div className="blog-post-card2-container">
         <div className="blog-post-card2-container1">
@@ -26,10 +27,10 @@ const BlogPostCard2 = (props) => {
             />
             <span className="blog-post-card2-text4">{props.author}</span>
           </div>
-          <span className="blog-post-card2-text5">Read More -&gt;</span>
+          <a className="blog-post-card2-text5 after:absolute after:inset-0" href={props.link}>Read More -&gt;</a>
         </div>
       </div>
-    </a>
+    </div>
   );
 };
 

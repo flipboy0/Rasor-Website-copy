@@ -5,7 +5,7 @@
   min-height: 100vh;
   align-items: left;
   flex-direction: column;
-  background-image: ;
+  /* background-image: ; */
   margin-left: 0%;
 }
 .home-blog {
@@ -17,14 +17,7 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.home-container1 {
-  display: flex;
-  align-items: center;
-  margin-bottom: var(--dl-space-space-twounits);
-  flex-direction: column;
-  justify-content: space-between;
-}
-.home-container2 {
+.home-blog-container {
   display: flex;
   align-items: center;
   margin-bottom: var(--dl-space-space-twounits);
