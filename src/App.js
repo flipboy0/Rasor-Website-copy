@@ -2,8 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import Footer from './components/Home_page/Footer/Footer';
 import Hero from './components/Home_page/Hero/hero';
-import Update from './components/Home_page/Announcements/section/update';
-import Home from './components/Home_page/Blogs/views/home'
+import Update from './components/Home_page/Announcements/update';
+import Blog from './components/Home_page/Blogs/Blog'
 //home is the blog component//
 import Newsletter from './components/Home_page/Newsletter/App'
 import Research from './components/Home_page/Research/research'
@@ -24,7 +24,7 @@ function App() {
       <Update />
     </router>
     <Research />
-    <Home/>
+    <Blog/>
     <Newsletter/>
     <Collaborate />
     <Footer/>

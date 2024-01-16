@@ -35,8 +35,26 @@ function Announcement() {
     dots: false,
     infinite: true,
     speed: 500,
+    slidesToScroll: 1,
     slidesToShow: 3,
-    slidesToScroll: 1
+    arrows: true,
+    prevArrow: <div className="slick-prev bg-red-900">&#9664;</div>,
+    nextArrow: <div className="slick-next bg-red-900">&#9654;</div>,
+    autoplay: true, 
+    responsive: [
+      {
+        breakpoint: 768, // Medium screen size
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480, // Small screen size
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -74,3 +92,4 @@ function Announcement() {
 
 
 export default Announcement;
+

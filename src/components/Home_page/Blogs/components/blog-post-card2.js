@@ -1,38 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './blog-post-card2.css';
 
 const BlogPostCard2 = (props) => {
   return (
-    <div className={`blog-post-card2-blog-post-card ${props.rootClassName} relative m-3`}>
-      <img
-        alt={props.image_alt}
-        src={props.image_src}
-        className="blog-post-card2-image"
-        style={{maxWidth: '100px'}}
-      />
-      <div className="blog-post-card2-container">
-        <div className="blog-post-card2-container1">
-          <span className="blog-post-card2-text">{props.label}</span>
-          <span className="blog-post-card2-text1">{props.when}</span>
-        </div>
-        <h3 className="blog-post-card2-text2">{props.title}</h3>
-        <span className="blog-post-card2-text3">{props.description}</span>
-        <div className="blog-post-card2-container2">
-          <div className="blog-post-card2-profile">
-            <img
-              alt={props.profile_alt}
-              src={props.profile_src}
-              className="blog-post-card2-image1"
-            />
-            <span className="blog-post-card2-text4">{props.author}</span>
+    <div className={`blog-post-card2-blog-post-card ${props.rootClassName} relative m-3 overflow-hidden border rounded-md shadow-md transition-transform ease-in transform-gpu hover:shadow-lg hover:scale-[1.02] sm:ml-4 hover:bg-d2b9b1 md:rounded-l-full`}>
+      <div className="sm:flex"> 
+        <img
+          alt={props.image_alt}
+          src={props.image_src}
+          className="blog-post-card2-image w-full sm:w-36 h-40 sm:h-auto object-cover border-10 border-white rounded sm:rounded-l-none sm:rounded-r-md transition-transform transform-gpu"
+        />
+        <div className="p-4 flex flex-col hover:bg-stone-300">
+          <div className="blog-post-card2-container1 flex items-start justify-between mb-2">
+            <span className="blog-post-card2-text text-xs font-bold text-uppercase text-gray-700">
+              {props.label}
+            </span>
+            <span className="blog-post-card2-text1 text-gray-700 font-light">{props.when}</span>
           </div>
-          <a className="blog-post-card2-text5 after:absolute after:inset-0" href={props.link}>Read More -&gt;</a>
+          <h3 className="blog-post-card2-text2 mb-2 text-xl">{props.title}</h3>
+          <span className="blog-post-card2-text3 text-gray-700 text-lg">{props.description}</span>
+          <div className="blog-post-card2-container2 flex self-start mt-4 items-center justify-between">
+            <div className="blog-post-card2-profile flex items-center">
+              <img
+                alt={props.profile_alt}
+                src={props.profile_src}
+                className="blog-post-card2-image1 w-8 h-8 object-cover rounded-full"
+              />
+              <span className="blog-post-card2-text4 ml-2 font-semibold">{props.author}</span>
+            </div>
+            <a className="blog-post-card2-text5 text-black font-semibold" href={props.link}>Read More -&gt;</a>
+          </div>
         </div>
       </div>
     </div>
   );
 };
+
+
 
 BlogPostCard2.defaultProps = {
   image_src:
