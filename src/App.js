@@ -5,7 +5,7 @@ import Hero from './components/Home_page/Hero/hero';
 import Update from './components/Home_page/Announcements/update';
 import Blog from './components/Home_page/Blogs/Blog'
 //home is the blog component//
-import Newsletter from './components/Home_page/Newsletter/App'
+import Newsletter from './components/Home_page/Newsletter/Newsletter'
 import Research from './components/Home_page/Research/research'
 import Collaborate from './components/Home_page/Collaborate/collaborate'
 
