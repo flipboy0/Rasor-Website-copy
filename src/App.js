@@ -19,10 +19,7 @@ function App() {
   return (
     <>
     <Hero/>
-    <router>
-      <hr className='w-24 bg-yellow-500'></hr>
-      <Update />
-    </router>
+    <Update />
     <Research />
     <Blog/>
     <Newsletter/>
