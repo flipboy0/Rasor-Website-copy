@@ -1,0 +1,21 @@
+.research-bg{
+    background-image: url("./assets/Rectangle_121_2.png");
+    background-color: white;
+    background-size: cover;
+  }
+
+  .faustina-600{
+    font-family: 'Faustina Variable', sans-serif;
+    font-weight: 600;
+  }
+  
+  .roboto-condensed {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+  }
+  
+  
+  .inter{
+    font-family: 'Inter Variable', sans-serif;
+    font-weight: 500;
+  }
