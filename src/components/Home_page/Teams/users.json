@@ -1,0 +1,101 @@
+[
+    {
+        "userId": 1,
+        "avatarUrl": "https://www.svgrepo.com/show/382096/female-avatar-girl-face-woman-user.svg",
+        "role": "Graphic",
+        "profession": "Software Engineer",
+        "name": "Aishwarya Menon"
+    },
+    {
+        "userId": 2,
+        "avatarUrl": "https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        "role": "Technical",
+        "profession": "Web Developer",
+        "name": "Ria Jain"
+    },
+    {
+        "userId": 3,
+        "avatarUrl": "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        "role": "Technical",
+        "profession": "Software Engineer",
+        "name": "Pratiksha Patil"
+    },
+    {
+        "userId": 4,
+        "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80",
+        "role": "Technical",
+        "profession": "Software Engineer",
+        "name": "Pradnya Gite"
+    },
+    {
+        "userId": 5,
+        "avatarUrl": "https://www.svgrepo.com/show/382097/female-avatar-girl-face-woman-user-9.svg",
+        "role": "Graphic",
+        "profession": "Web Developer",
+        "name": "Shivani Miraje"
+    },
+    {
+        "userId": 6,
+        "avatarUrl": "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png",
+        "role": "Technical",
+        "profession": "Software Engineer",
+        "name": "Vaishnavi Mane"
+    },
+    {
+        "userId": 7,
+        "avatarUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ42Y1_fnKWKiLCNdi8vu337thvIE4VqCHocQevv6A5jBGt6W3-YMZhz9qcEWEXCofGLNY&usqp=CAU",
+        "role": "Public Relation",
+        "profession": "Web Developer",
+        "name": "Apurva Kale"
+    },
+    {
+        "userId": 8,
+        "avatarUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ42Y1_fnKWKiLCNdi8vu337thvIE4VqCHocQevv6A5jBGt6W3-YMZhz9qcEWEXCofGLNY&usqp=CAU",
+        "role": "Graphic",
+        "profession": "Cybersecurity Specialist",
+        "name": "Mrunalini Patne"
+    },
+    {
+        "userId": 9,
+        "avatarUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ42Y1_fnKWKiLCNdi8vu337thvIE4VqCHocQevv6A5jBGt6W3-YMZhz9qcEWEXCofGLNY&usqp=CAU",
+        "role": "Graphic",
+        "profession": "Data Scientist",
+        "name": "Siddharth Shetty"
+    },
+    {
+        "userId": 10,
+        "avatarUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ42Y1_fnKWKiLCNdi8vu337thvIE4VqCHocQevv6A5jBGt6W3-YMZhz9qcEWEXCofGLNY&usqp=CAU",
+        "role": "Public Relation",
+        "profession": "Web Developer",
+        "name": "Aditi Rao"
+    },
+    {
+        "userId": 11,
+        "avatarUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ42Y1_fnKWKiLCNdi8vu337thvIE4VqCHocQevv6A5jBGt6W3-YMZhz9qcEWEXCofGLNY&usqp=CAU",
+        "role": "Graphic",
+        "profession": "System Analyst",
+        "name": "Rahul Khanna"
+    },
+    {
+        "userId": 12,
+        "avatarUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ42Y1_fnKWKiLCNdi8vu337thvIE4VqCHocQevv6A5jBGt6W3-YMZhz9qcEWEXCofGLNY&usqp=CAU",
+        "role": "Technical",
+        "profession": "Cybersecurity Specialist",
+        "name": "Akshay Kumar"
+    },
+    {
+        "userId": 13,
+        "avatarUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ42Y1_fnKWKiLCNdi8vu337thvIE4VqCHocQevv6A5jBGt6W3-YMZhz9qcEWEXCofGLNY&usqp=CAU",
+        "role": "Content",
+        "profession": "Cybersecurity Specialist",
+        "name": "Aarav"
+    },
+    {
+        "userId": 14,
+        "avatarUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ42Y1_fnKWKiLCNdi8vu337thvIE4VqCHocQevv6A5jBGt6W3-YMZhz9qcEWEXCofGLNY&usqp=CAU",
+        "role": "Content",
+        "profession": "Data Scientist",
+        "name": "Maya"
+    }
+  ]
+  
