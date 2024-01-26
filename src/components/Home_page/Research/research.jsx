@@ -8,7 +8,7 @@ import "./css/research.css"
 function Research(){
     return(
         
-<div className="research-bg p-20">
+<div className="research-bg p-5 md:p-15 lg:p-20">
     
     <div className="bg-white rounded-[15px] shadow-2xl md:flex justify-center space-x-[33px]">
         <div className="grid-flow-col grid-cols-1">
@@ -37,10 +37,10 @@ function Research(){
                 
             </div>
             <div className="inter md:pl-20 pt-10 flex flex-col items-center space-y-5 md:pb-[100px]">
-                <button className="md:w-[450px] md:h-[50px] w-[300px] h-[50px] hover:bg-[#dc9f2c] text-white text-2xl shadow-md py-2 px-4 border bg-[#DFA43A] hover:border-transparent rounded">
+                <button className="md:w-[450px] md:h-[50px] w-[270px] h-[50px] hover:bg-[#dc9f2c] text-white text-2xl shadow-md py-2 px-4 border bg-[#DFA43A] hover:border-transparent rounded">
                     Register
                 </button>
-                <button className="md:w-[450px] md:h-[50px] w-[300px] h-[50px] bg-transparent hover:bg-gray-100 text-[#DFA43A] text-2xl shadow-md  py-2 px-4 border border-[#DFA43A] hover:border-transparent rounded">
+                <button className="md:w-[450px] md:h-[50px] w-[270px] h-[50px] bg-transparent hover:bg-gray-100 text-[#DFA43A] text-2xl shadow-md  py-2 px-4 border border-[#DFA43A] hover:border-transparent rounded">
                     Download brochure
                 </button>
                 
