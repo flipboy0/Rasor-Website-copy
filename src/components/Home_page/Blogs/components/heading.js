@@ -20,7 +20,7 @@ const Heading = (props) => {
       href={props.View}
       target="_blank"
       rel="noreferrer noopener"
-      className="text-red-700 hover:bg-red-700 hover:text-white hover:shadow-md transition duration-300 ease-in-out px-4 py-2 rounded-full"
+      className="relative bg-red-700 text-white hover:text-yellow-400 px-4 py-2 rounded-full before:rounded-full transition-colors before:absolute before:bg-yellow-400 before:inset-0 before:-z-[1] before:h-full before:w-full before:border-4 before:border-transparent before:transition-all before:content-[''] before:hover:top-1 before:hover:left-1 before:hover:border-yellow-300"
     >
       View&gt;&gt;
     </a>

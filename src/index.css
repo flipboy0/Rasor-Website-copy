@@ -20,15 +20,21 @@ code {
 }
 
 .slick-dots li.slick-active button:before {
-  color: rgb(223, 22, 22) !important;
+  color: rgb(163, 223, 22) !important;
 }
 .slick-prev:before{
-  content: "🢀";
+  content: "🡰";
   font-family:initial!important;
-  color:rgba(82, 0, 0, 0.979); 
+  border-radius: 100%;
+  border: 5px;
+  background-color: rgb(78, 10, 10);
+  border-color: rgb(78, 10, 10);
 }
 .slick-next:before {
-    content: "🢂";
+    content: "🡲";
     font-family:initial!important;
-    color:rgba(82, 0, 0, 0.979); 
+    border-radius: 100%;
+    background-color: rgb(78, 10, 10);
+    border: 5px;
+    border-color: rgb(78, 10, 10);
 }

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const BlogPostCard2 = (props) => {
   return (
-    <div className={`blog-post-card2-blog-post-card ${props.rootClassName} relative mt-3 overflow-hidden border-0 rounded-md shadow-md transition-transform ease-in transform-gpu hover:shadow-lg hover:scale-[1.02] sm:ml-4 hover:bg-d2b9b1 md:rounded-l-full`}>
+    <div className={`blog-post-card2-blog-post-card ${props.rootClassName} relative mt-3 overflow-hidden border-0 shadow-md transition-transform ease-in transform-gpu hover:shadow-lg hover:scale-[1.02] sm:ml-4 hover:bg-d2b9b1 rounded-3xl`}>
       <div className="sm:flex bg-white"> 
         <img
           alt={props.image_alt}
