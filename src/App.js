@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Footer from './components/Home_page/Footer/Footer';
 import Hero from './components/Home_page/Hero/hero';
@@ -9,6 +9,8 @@ import Newsletter from './components/Home_page/Newsletter/Newsletter'
 import Teams from './components/Home_page/Teams/Teams'
 import Research from './components/Home_page/Research/research'
 import Collaborate from './components/Home_page/Collaborate/collaborate'
+import ContactPage from './components/Home_page/ContactCollaboration/ContactPage'
+import CollaborationPage from './components/Home_page/ContactCollaboration/CollaborationPage'
 
 import '@fontsource-variable/faustina';
 import '@fontsource/roboto-condensed';
@@ -26,6 +28,8 @@ function App() {
     <Teams/>
     <Newsletter/>
     <Collaborate />
+    <ContactPage/>
+    <CollaborationPage/>
     <Footer/>
     </>
    
