@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactForm from './Form';
+import Form from './Form';
 import arrowImage from './arrow.png';
 
 export default function ContactPage() {
@@ -14,7 +14,7 @@ export default function ContactPage() {
           <img src={arrowImage} alt="Arrow" className="mt-5 mr-5"/>
         </div>
           <div className="w-1/2 p-4">
-            <ContactForm bgColor="bg-[#DFA43A]" />
+            <Form bgColor="bg-[#DFA43A]" formType="contact" />
           </div>
         </div>
       </div>
