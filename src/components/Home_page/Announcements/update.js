@@ -1,6 +1,7 @@
 import React from 'react';
 import Announcement from './component/announcement';
 import Event from './component/event';
+import 'animate.css'
 
 function Update() {
   return (

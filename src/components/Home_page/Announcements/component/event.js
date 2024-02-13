@@ -7,28 +7,23 @@ const Event = () => {
 
   return (
     <div className="flex-col">
-      <header className="flex flex-wrap pt-8 Heading-header">
-  <div className="w-full md:w-[15%] shrink h-8 xl:w-1/5 bg-[#DFA23A] p-4 self-center">
-    {/* Content for the colored block */}
-  </div>
+      <header className="flex justify-between pt-8 Heading-header">
 
-  <div className="w-2/3 md:w-1/3 lg:w-1/3 xl:w-1/3 p-4">
+  
+  <div className="border-l-8 border-l-[#DFA23A] md:border-l-[80px] px-2">
     {/* Content for the title */}
     <h1 className="text-xl font-bold text-white">Event</h1>
   </div>
 
-  <div className="w-1/4 sm:w-2/5 md:w-1/3 lg:w-2/5 xl:w-1/3 py-4 place-items-end shrink ">
-  {/* Content for the link */}
-  <div className="text-right place-content-end">
-    <a
+  <div className="pr-6 self-center">
+  <a
       href="www.google.com"
       target="_blank"
       rel="noreferrer noopener"
-      className="relative bg-[#DFA23A] text-black hover:bg-red-800 px-4 py-2 rounded-full before:rounded-full transition-colors before:absolute before:bg-red-400 before:inset-0 before:-z-[1] before:h-full before:w-full before:border-4 before:border-transparent before:transition-all before:content-[''] before:hover:top-1 before:hover:left-1 before:hover:border-red-300"
+      className="relative self-center bg-[#DFA23A] text-black hover:bg-red-800 px-4 py-2 rounded-full before:rounded-full transition-colors before:absolute before:bg-red-400 before:inset-0 before:-z-[1] before:h-full before:w-full before:border-4 before:border-transparent before:transition-all before:content-[''] before:hover:top-1 before:hover:left-1 before:hover:border-red-300"
     >
       📅
     </a>
-  </div>
 </div>
 </header>
       <div className='h-20'></div>

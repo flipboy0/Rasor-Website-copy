@@ -1,10 +1,10 @@
 
 function App() {
   return (
-    <div className='bg-[#851815] py-28 flex justify-center items-center'>
+    <div className='bg-[#851815] py-10 flex justify-center items-center'>
       <div className='flex flex-col items-center justify-center gap-y-10 px-5 w-[1300px]'>
         <div className=''>
-          <h1 className='text-2xl text-white text-center faustina-400 '>
+          <h1 className='text-md md:text-xl lg:text-2xl text-white text-center faustina-400 '>
           For monthly updates subscribe to our 
           <span className='faustina-700'> NEWSLETTER</span>
         </h1>
