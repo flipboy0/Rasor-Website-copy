@@ -8,7 +8,7 @@ import "./css/research.css"
 function Research(){
     return(
         
-<div className="research-bg p-5 md:p-15 lg:p-20">
+<div id="research" className="research-bg p-5 md:p-15 lg:p-20">
     
     <div className="bg-white rounded-[15px] shadow-2xl md:flex justify-center space-x-[33px]">
         <div className="grid-flow-col grid-cols-1">

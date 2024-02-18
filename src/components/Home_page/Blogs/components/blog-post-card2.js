@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 
 const BlogPostCard2 = (props) => {
   return (
-    <div className={`blog-post-card2-blog-post-card ${props.rootClassName} relative mt-3 overflow-hidden border-0 shadow-md transition-transform ease-in transform-gpu hover:shadow-lg hover:scale-[1.02] sm:ml-4 hover:bg-d2b9b1 rounded-3xl`}>
-      <div className="sm:flex bg-white"> 
+    <div className={`blog-post-card2-blog-post-card ${props.rootClassName} relative mt-3 overflow-hidden hover:ring-4 ring-red-800 border-0 shadow-sm shadow-black/30 transition-transform ease-in transform-gpu hover:shadow-lg hover:scale-[1.02] sm:ml-4 rounded-3xl`}>
+      <div className="sm:flex bg-white hover:bg-white/70"> 
         <img
           alt={props.image_alt}
           src={props.image_src}
           className="blog-post-card2-image w-full sm:w-36 h-40 sm:h-auto object-cover border-10 border-white rounded sm:rounded-l-none sm:rounded-r-md transition-transform transform-gpu"
         />
-        <div className="p-4 flex flex-col hover:bg-stone-300">
+        <div className="p-4 flex flex-col">
           <div className="blog-post-card2-container1 flex items-start justify-between mb-2">
             <span className="blog-post-card2-text text-xs font-bold text-uppercase text-gray-700">
               {props.label}

@@ -21,7 +21,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative">
+    <div id="home" className="relative">
       <div className={`sticky top-0 z-50 w-full ${isScrolled ? 'bg-opacity-90' : 'bg-opacity-100 transition-opacity duration-500'}`}>
         <Navbar isScrolled={isScrolled} />
       </div>
@@ -33,7 +33,7 @@ const Hero = () => {
         }}
       >
         <div className="text-center w-4/5 text-white sticky top-20">
-          <h1 className="text-3xl md:text-5xl font-bold m-4 animate__animated animate__fadeInDown">
+          <h1 className="text-3xl md:text-5xl font-bold m-4 animate__animated animate__fadeInDown"            >
             Ramanujan Society of Research
           </h1>
           <p className="lg:text-lg text-sm mb-8 max-w-2xl mx-auto animate__animated animate__fadeInUp border-t-[3px] border-yellow-500/45 pt-6">

@@ -20,7 +20,7 @@ code {
 }
 
 .slick-dots li.slick-active button:before {
-  color: rgb(163, 223, 22) !important;
+  color: rgb(223, 22, 22) !important;
 }
 .slick-prev:before{
   content: "🡰";

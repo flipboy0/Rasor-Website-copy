@@ -1,3 +1,4 @@
+// Navbar.js
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-scroll';
 import logo from "./img_src/Rasor_Logo.png";
@@ -9,7 +10,6 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isNavFocused, setIsNavFocused] = useState(false);
   const timeoutRef = useRef(null);
-  let timeoutId;
   const navbarRef = useRef();
 
   const handleScroll = () => {
@@ -38,7 +38,6 @@ const Navbar = () => {
       setIsVisible(false);
     }
   };
-  
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -52,16 +51,18 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  // Define an array of section names for mobile menu
+  const sectionNames = ['Home', 'Update', 'Research', 'Blog', 'Newsletter'];
+
   return (
     <nav className={`${
       isScrolled ? ' bg-red-900 shadow-md' : ' bg-gradient-to-r from-brown to-white to-black'
     } fixed top-0 left-0 right-0 z-50 p-2 transition-all duration-300 ${
       isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full '
     }`}
-    
-    onMouseEnter={handleMouseEnter}
+      onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      >
+    >
       <div className="container mx-auto flex flex-row justify-between items-center">
         <div className="flex items-center mb-4 md:mb-0">
           <Link to="home" smooth={true} duration={500}>
@@ -75,21 +76,34 @@ const Navbar = () => {
         </div>
         <div className={`flex flex-col md:flex-row items-center text-xl text-yellow-300/50 ${isScrolled ? " text-yellow-400" : ' rounded-lg'}`}>
           <div className={`md:hidden ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
-            <Link to="home" smooth={true} duration={500} className="block p-2">Home</Link>
-            <Link to="link1" smooth={true} duration={500} className="block p-2">Link 1</Link>
-            <Link to="link2" smooth={true} duration={500} className="block p-2">Link 2</Link>
-            <Link to="link3" smooth={true} duration={500} className="block p-2">Link 3</Link>
-            <Link to="link4" smooth={true} duration={500} className="block p-2">Link 4</Link>
-            <Link to="link5" smooth={true} duration={500} className="block p-2">Link 5</Link>
+            {sectionNames.map((sectionName, index) => (
+              <Link key={index} to={sectionName.toLowerCase().replace(/\s/g, '-')} smooth={true} duration={500} className="block p-2">
+                {sectionName}
+              </Link>
+            ))}
           </div>
           <div className="md:flex hidden items-center">
-            <Link to="home" smooth={true} duration={500} className="hover:text-black hover:border-black-50 hover:bg-yellow-400/50 rounded-md transition-all duration-300 p-2 md:p-3">Home</Link>
-            <Link to="link1" smooth={true} duration={500} className="hover:text-black hover:border-black-50 hover:bg-yellow-400/50 rounded-md transition-all duration-300 p-2 md:p-3">Link 1</Link>
-            <Link to="link2" smooth={true} duration={500} className="hover:text-black hover:border-black-50 hover:bg-yellow-400/50 rounded-md transition-all duration-300 p-2 md:p-3">Link 2</Link>
-            <Link to="link3" smooth={true} duration={500} className="hover:text-black hover:border-black-50 hover:bg-yellow-400/50 rounded-md transition-all duration-300 p-2 md:p-3">Link 3</Link>
-            <Link to="link4" smooth={true} duration={500} className="hover:text-black hover:border-black-50 hover:bg-yellow-400/50 rounded-md transition-all duration-300 p-2 md:p-3">Link 4</Link>
-            <Link to="link5" smooth={true} duration={500} className="hover:text-black hover:border-black-50 hover:bg-yellow-400/50 rounded-md transition-all duration-300 p-2 md:p-3">Link 5</Link>
-          </div>
+  {sectionNames.map((sectionName, index) => (
+    <Link
+      key={index}
+      to={sectionName.toLowerCase().replace(/\s/g, '-')}
+      smooth={true}
+      duration={500}
+      className="hover:text-black hover:border-black-50 hover:bg-yellow-400/50 rounded-md transition-all duration-300 p-2 md:p-3"
+    >
+      {sectionName}
+    </Link>
+  ))}
+  <Link
+    to="collaborate"
+    smooth={true}
+    duration={500}
+    className="hover:text-black hover:border-black-50 hover:bg-green-400 rounded-md transition-all duration-300 p-2 md:p-3"
+  >
+    Contact Us
+  </Link>
+</div>
+
         </div>
         <div className="md:hidden cursor-pointer" onClick={toggleMobileMenu}>
           <svg

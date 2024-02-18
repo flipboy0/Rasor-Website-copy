@@ -5,7 +5,7 @@ import 'animate.css'
 
 function Update() {
   return (
-    <section className="flex flex-col md:flex-row">
+    <section id="update" className="flex flex-col md:flex-row">
       <div className="md:w-3/4 w-full bg-[#F6F6F6]">
         <Announcement />
       </div>
