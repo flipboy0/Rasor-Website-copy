@@ -7,26 +7,27 @@ import twitterIcon from "./img_src/twitter.png";
 import facebookIcon from "./img_src/facebook.png";
 
 const Footer = (props) => {
+  const backgroundImageUrl = '/welcome_bg.png';
   return (
-    <footer className="text-gray-600 body-font bg-red-100">
-      <div className="container px-5 py-10 mx-auto">
+    <footer className="text-gray-600 body-font border-t-4 border-red-800 " style={{ backgroundImage: `url(${backgroundImageUrl})`, backgroundSize: 'cover', backgroundPosition: 'left', }}>
+      <div className="container bg-image  px-5 py-10 mx-auto">
 <div className="flex flex-wrap justify-between md:text-left text-center order-first">
   {/* About Us Section */}
-  <div className="w-[70%] m-auto flex flex-wrap md:text-left text-center order-first">
+  <div className="w-11/12 md:w-[70%] bg-black/60 hover:bg-black/80 ring-2 ring-red-800 m-auto flex flex-wrap md:text-left text-center order-first pt-5">
   <div className="lg:w-1/4 w-1/2 px-4">
-    <h2 className="title-font font-semibold text-gray-900 tracking-widest text-md mb-3">About Us</h2>
-    <nav className="list-none mb-5">
+    <h2 className="title-font font-semibold text-red-800 tracking-widest text-md mb-3">About Us</h2>
+    <nav className="list-none mb-5 text-white">
       <li>
-        <a href="#about-rasor" className="text-gray-600 hover:text-gray-800">About RaSoR</a>
+        <a href="#about-rasor" className=" hover:text-yellow-200">About RaSoR</a>
       </li>
       <li>
-        <a href="#join-us" className="text-gray-600 hover:text-gray-800">Join Us</a>
+        <a href="#join-us" className=" hover:text-yellow-200">Join Us</a>
       </li>
       <li>
-        <a href="#teams" className="text-gray-600 hover:text-gray-800">Teams</a>
+        <a href="#teams" className=" hover:text-yellow-200">Teams</a>
       </li>
       <li>
-        <a href="#faqs" className="text-gray-600 hover:text-gray-800">FAQs</a>
+        <a href="#faqs" className=" hover:text-yellow-200">FAQs</a>
       </li>
     </nav>
   </div>
@@ -34,57 +35,57 @@ const Footer = (props) => {
 
   {/* Publications Section */}
   <div className="lg:w-1/4 w-1/2 px-4">
-    <h2 className="title-font font-semibold text-gray-900 tracking-widest text-md mb-3">Publications</h2>
-    <nav className="list-none mb-5">
+    <h2 className="title-font font-semibold text-red-800 tracking-widest text-md mb-3">Publications</h2>
+    <nav className="list-none mb-5 text-white">
       <li>
-        <a href="#about-publications" className="text-gray-600 hover:text-gray-800">About Publications</a>
+        <a href="#about-publications" className="hover:text-yellow-200">About Publications</a>
       </li>
       <li>
-        <a href="#digital-library" className="text-gray-600 hover:text-gray-800">Digital Library</a>
+        <a href="#digital-library" className="hover:text-yellow-200">Digital Library</a>
       </li>
       <li>
-        <a href="#journals" className="text-gray-600 hover:text-gray-800">Journals</a>
+        <a href="#journals" className="hover:text-yellow-200">Journals</a>
       </li>
       <li>
-        <a href="#blogs" className="text-gray-600 hover:text-gray-800">Blogs</a>
+        <a href="#blogs" className="hover:text-yellow-200">Blogs</a>
       </li>
     </nav>
   </div>
 
   {/* Research Section */}
   <div className="lg:w-1/4 w-1/2 px-4">
-    <h2 className="title-font font-semibold text-gray-900 tracking-widest text-md mb-3">Research</h2>
-    <nav className="list-none mb-5">
+    <h2 className="title-font font-semibold text-red-800 tracking-widest text-md mb-3">Research</h2>
+    <nav className="list-none mb-5 text-white">
       <li>
-        <a href="#current-research" className="text-gray-600 hover:text-gray-800">Current Research Areas</a>
+        <a href="#current-research" className="hover:text-yellow-200">Current Research Areas</a>
       </li>
       <li>
-        <a href="#innovation" className="text-gray-600 hover:text-gray-800">Innovation</a>
+        <a href="#innovation" className="hover:text-yellow-200">Innovation</a>
       </li>
       <li>
-        <a href="#collaboration" className="text-gray-600 hover:text-gray-800">Collaboration</a>
+        <a href="#collaboration" className="hover:text-yellow-200">Collaboration</a>
       </li>
     </nav>
   </div>
 
   {/* Important Links Section */}
   <div className="lg:w-1/4 w-1/2 px-4">
-    <h2 className="title-font font-semibold  text-gray-900 tracking-widest text-md mb-3">Important Links</h2>
-    <nav className="list-none mb-5">
+    <h2 className="title-font font-semibold  text-red-800 tracking-widest text-md mb-3">Important Links</h2>
+    <nav className="list-none mb-5  text-white">
       <li>
-        <a href="#privacy-policy" className="text-gray-600 hover:text-gray-800">Privacy Policy</a>
+        <a href="#privacy-policy" className="hover:text-yellow-200">Privacy Policy</a>
       </li>
       <li>
-        <a href="#accessibility" className="text-gray-600 hover:text-gray-800">Accessibility</a>
+        <a href="#accessibility" className="hover:text-yellow-200">Accessibility</a>
       </li>
       <li>
-        <a href="#terms-of-use" className="text-gray-600 hover:text-gray-800">Terms of Use</a>
+        <a href="#terms-of-use" className="hover:text-yellow-200">Terms of Use</a>
       </li>
       <li>
-        <a href="#rti" className="text-gray-600 hover:text-gray-800">RTI</a>
+        <a href="#rti" className="hover:text-yellow-200">RTI</a>
       </li>
       <li>
-        <a href="#tenders" className="text-gray-600 hover:text-gray-800">Tenders</a>
+        <a href="#tenders" className="hover:text-yellow-200">Tenders</a>
       </li>
     </nav>
   </div>

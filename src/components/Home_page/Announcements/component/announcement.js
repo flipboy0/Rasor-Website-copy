@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import "animate.css"
 
 const data = [
   {
@@ -79,13 +80,15 @@ function Announcement() {
         <div className="mt-20 ">
           <Slider {...settings}>
           {data.map((d, index) =>  (<a key={index} href="https://example.com">
-              <div key={d.name} className="bg-white h-[400px] text-black rounded-xl mb-20 shadow-lg hover:shadow-2xl hover:bg-stone-300">
+              <div key={d.name} className="bg-white mx-2 my-5 h-[400px] ring-black text-black hover:ring-4 hover:ring-red-800 rounded-xl mb-20 shadow-lg hover:shadow-2x hover:scale-105 transition-all ">
                 <div className='h-56 bg-[#851815] flex justify-center items-center rounded-t-xl'>
                   <img src={d.img} alt="" className="object-cover object-center h-full w-full rounded-t-xl" />
                 </div>
                 <div className="flex flex-col items-center justify-center">
-                  <p className="text-xl font-semibold">{d.name}</p>
-                  <p className="text-center overflow-hidden overflow-ellipsis">{d.review}</p>
+                  <p className="text-xl overflow-hidden font-semibold p-2 mt-2 rounded-md animate">{d.name}</p>
+                  <div  className="flex flex-col items-center justify-center">
+                  <p className=" p-2 self-center justify-self-center overflow-ellipsis">{d.review}</p>
+                  </div>
                 </div>
               </div></a>
             ))}

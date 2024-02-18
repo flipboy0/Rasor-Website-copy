@@ -7,24 +7,35 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isNavFocused, setIsNavFocused] = useState(false);
+  const timeoutRef = useRef(null);
   let timeoutId;
   const navbarRef = useRef();
 
   const handleScroll = () => {
-    const isHovered = navbarRef.current && document && document.activeElement && navbarRef.current.contains(document.activeElement);
-    const isOnHomeScreen = window.location.hash === '#home';
-  
-    if (isHovered || isOnHomeScreen) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(true);
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => {
+    setIsVisible(true);
+    clearTimeout(timeoutRef.current);
+
+    timeoutRef.current = setTimeout(() => {
+      if (!isNavFocused) {
         setIsVisible(false);
-      }, 2000);
-  
-      const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 0);
+      }
+    }, 2000);
+
+    const scrollPosition = window.scrollY;
+    setIsScrolled(scrollPosition > 0);
+  };
+
+  const handleMouseEnter = () => {
+    setIsVisible(true);
+    setIsNavFocused(true);
+    clearTimeout(timeoutRef.current);
+  };
+
+  const handleMouseLeave = () => {
+    setIsNavFocused(false);
+    if (!isScrolled) {
+      setIsVisible(false);
     }
   };
   
@@ -33,6 +44,7 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      clearTimeout(timeoutRef.current);
     };
   }, []);
 
@@ -45,7 +57,11 @@ const Navbar = () => {
       isScrolled ? ' bg-red-900 shadow-md' : ' bg-gradient-to-r from-brown to-white to-black'
     } fixed top-0 left-0 right-0 z-50 p-2 transition-all duration-300 ${
       isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full '
-    }`}>
+    }`}
+    
+    onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      >
       <div className="container mx-auto flex flex-row justify-between items-center">
         <div className="flex items-center mb-4 md:mb-0">
           <Link to="home" smooth={true} duration={500}>
