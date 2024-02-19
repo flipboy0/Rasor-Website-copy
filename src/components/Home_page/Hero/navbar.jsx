@@ -10,7 +10,6 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isNavFocused, setIsNavFocused] = useState(false);
   const timeoutRef = useRef(null);
-  const navbarRef = useRef();
 
   const handleScroll = () => {
     setIsVisible(true);

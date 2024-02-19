@@ -27,7 +27,7 @@ const Blog = (props) => {
   const isSmallScreen = window.innerWidth <= 600;
 
   return (
-    <div id="blog" className="flex flex-col items-left min-h-screen" style={{ backgroundImage: `url(${backgroundImageUrl})`, backgroundSize: 'cover', backgroundPosition: 'left' }}>
+    <div id="blog" className="flex flex-col items-left min-h-screen bg-white" style={{ backgroundImage: `url(${backgroundImageUrl})`, backgroundSize: 'cover', backgroundPosition: 'left' }}>
       <Heading className=""></Heading>
       <div className="flex flex-col items-center justify-between w-full max-w-screen-xl mx-auto px-8 md:px-16 lg:px-32 py-8">
         {blogPosts.slice(0, isSmallScreen ? 2 : blogPosts.length).map((post, index) => (

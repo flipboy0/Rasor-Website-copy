@@ -22,11 +22,11 @@ const Hero = () => {
 
   return (
     <div id="home" className="relative">
-      <div className={`sticky top-0 z-50 w-full ${isScrolled ? 'bg-opacity-90' : 'bg-opacity-100 transition-opacity duration-500'}`}>
+      <div className={`sticky on top-0 z-50 w-full ${isScrolled ? 'bg-opacity-90' : 'bg-opacity-100 transition-opacity duration-500'}`}>
         <Navbar isScrolled={isScrolled} />
       </div>
       <div
-        className={`bg-cover bg-center -z-20 h-screen flex flex-col items-center justify-center relative ${isScrolled ? 'bg-opacity-90' : 'bg-opacity-100 transition-opacity duration-500'}`}
+        className={`bg-cover bg-center -z-50 h-screen flex flex-col items-center justify-center relative ${isScrolled ? 'bg-opacity-90' : 'bg-opacity-100 transition-opacity duration-500'}`}
         style={{
           backgroundImage: `url(${background})`,
           backgroundColor: "rgba(0, 0, 0, 0.5)",
