@@ -10,10 +10,10 @@ function Research(){
         
 <div id="research" className="research-bg p-5 md:p-15 lg:p-20">
     
-    <div className="bg-white rounded-[15px] shadow-2xl md:flex justify-center space-x-[33px]">
+    <div className="bg-white rounded-[15px] shadow-2xl md:flex justify-center">
         <div className="grid-flow-col grid-cols-1">
             <div className="md:pl-20 pt-10 flex md:flex-row flex-col-reverse" >
-                <div className="faustina-600 text-black sm:text-7xl text-5xl md:text-left text-center pl-5 pr-5">
+                <div className="faustina-600 text-black sm:text-6xl text-4xl md:text-left text-center pl-5 pr-5">
                     Research Summit’23
                 </div>
                 <div className="shrink-0 flex space-x-[-30px] md:justify-start md:items-start items-center justify-center">
@@ -21,11 +21,11 @@ function Research(){
                     <img className="w-30 h-20 bottom-0" src={Rasor} />
                 </div>
             </div>
-            <h2 className="roboto-condensed text-gray-400 sm:text-3xl md:text-left text-2xl md:pl-20 pt-5 pl-10 pr-10 text-center">
+            <h2 className="roboto-condensed text-gray-400 sm:text-2xl md:text-left text-xl md:pl-20 pt-5 pl-10 pr-10 text-center">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 a  
                     Lorem ipsumdolor sit amet
             </h2>
             <div className="roboto-condensed pl-20 pt-5 pr-10">
-                <h2 className="text-xl sm:text-2xl text-[#515151] overflow-hidden">
+                <h2 className="text-lg sm:text-xl text-[#515151] overflow-hidden">
                     Lorem ipsum dolor sit amet consectetur. Purus magna urna lorembr
                     vel rhoncus. Nulla et tristique volutpat lectus euismod ullamcorper.
                     Ac ipsum rhoncus laoreet quis a. Lorem fermentum posuere in nunc.
@@ -48,7 +48,7 @@ function Research(){
             
         </div>
     
-      <div className="overflow-hidden rounded-t-lg rounded-l-lg">
+      <div className="overflow-hiddenzzzz rounded-t-lg rounded-l-lg">
         <img src={Mask} className="lg:h-full lg:w-full h-10 invisible lg:visible "/>
       </div>
       

@@ -26,13 +26,15 @@ const Hero = () => {
         <Navbar isScrolled={isScrolled} />
       </div>
       <div
-        className={`bg-cover bg-center h-screen flex flex-col items-center justify-center relative ${isScrolled ? 'bg-opacity-90' : 'bg-opacity-100 transition-opacity duration-500'}`}
+        className={`bg-cover bg-center -z-20 h-screen flex flex-col items-center justify-center relative ${isScrolled ? 'bg-opacity-90' : 'bg-opacity-100 transition-opacity duration-500'}`}
         style={{
           backgroundImage: `url(${background})`,
           backgroundColor: "rgba(0, 0, 0, 0.5)",
+          backgroundSize: 'cover',
+          backgroundAttachment: 'fixed'
         }}
       >
-        <div className="text-center w-4/5 text-white sticky top-20">
+        <div className="text-center w-4/5 fixed top-2/5 text-white">
           <h1 className="text-3xl md:text-5xl font-bold m-4 animate__animated animate__fadeInDown"            >
             Ramanujan Society of Research
           </h1>

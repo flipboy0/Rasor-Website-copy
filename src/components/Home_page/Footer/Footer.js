@@ -15,7 +15,7 @@ const Footer = (props) => {
   {/* About Us Section */}
   <div className="w-11/12 md:w-[70%] bg-black/60 hover:bg-black/80 ring-2 ring-red-800 m-auto flex flex-wrap md:text-left text-center order-first pt-5">
   <div className="lg:w-1/4 w-1/2 px-4">
-    <h2 className="title-font font-semibold text-red-800 tracking-widest text-md mb-3">About Us</h2>
+    <h2 className="title-font font-semibold text-red-400 tracking-widest text-md mb-3">About Us</h2>
     <nav className="list-none mb-5 text-white border-r-2 border-red-800 pr-2 lg:pr-0">
       <li>
         <a href="#about-rasor" className=" hover:text-yellow-200">About RaSoR</a>
@@ -35,7 +35,7 @@ const Footer = (props) => {
 
   {/* Publications Section */}
   <div className="lg:w-1/4 w-1/2 px-4">
-    <h2 className="title-font font-semibold text-red-800 tracking-widest text-md mb-3">Publications</h2>
+    <h2 className="title-font font-semibold text-red-400 tracking-widest text-md mb-3">Publications</h2>
     <nav className="list-none mb-5 text-white lg:border-r-2 border-red-800 lg:pr-0 pr-2">
       <li>
         <a href="#about-publications" className="hover:text-yellow-200">About Publications</a>
@@ -54,7 +54,7 @@ const Footer = (props) => {
 
   {/* Research Section */}
   <div className="lg:w-1/4 w-1/2 px-4">
-    <h2 className="title-font font-semibold text-red-800 tracking-widest text-md mb-3">Research</h2>
+    <h2 className="title-font font-semibold text-red-400 tracking-widest text-md mb-3">Research</h2>
     <nav className="list-none mb-5 text-white border-r-2 border-red-800">
       <li>
         <a href="#current-research" className="hover:text-yellow-200">Current Research Areas</a>
@@ -73,7 +73,7 @@ const Footer = (props) => {
 
   {/* Important Links Section */}
   <div className="lg:w-1/4 w-1/2 px-4">
-    <h2 className="title-font font-semibold  text-red-800 tracking-widest text-md mb-3">Important Links</h2>
+    <h2 className="title-font font-semibold  text-red-400 tracking-widest text-md mb-3">Important Links</h2>
     <nav className="list-none mb-5  text-white">
       <li>
         <a href="#privacy-policy" className="hover:text-yellow-200">Privacy Policy</a>

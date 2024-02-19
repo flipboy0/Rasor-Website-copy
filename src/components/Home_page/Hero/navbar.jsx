@@ -52,14 +52,12 @@ const Navbar = () => {
   };
 
   // Define an array of section names for mobile menu
-  const sectionNames = ['Home', 'Update', 'Research', 'Blog', 'Newsletter'];
+  const sectionNames = ['Home', 'Update', 'Research', 'Blog', 'Newsletter'];;
 
   return (
-    <nav className={`${
-      isScrolled ? ' bg-red-900 shadow-md' : ' bg-gradient-to-r from-brown to-white to-black'
-    } fixed top-0 left-0 right-0 z-50 p-2 transition-all duration-300 ${
-      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full '
-    }`}
+    <nav className={`${isScrolled ? ' bg-red-900 shadow-md' : ' bg-gradient-to-r from-brown to-white to-black'
+      } fixed top-0 left-0 right-0 z-50 p-2 transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full '
+      }`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -69,46 +67,39 @@ const Navbar = () => {
             <img src={logo} alt="Logo" className={`ml-2 rounded-full ${isScrolled ? "w-20 h-20" : "w-25 h-25"}`} />
           </Link>
           <div className={`ml-2 ${isScrolled ? 'opacity-100' : 'opacity-0 invisible'}`}>
-            <p className="text-3xl font-bold hidden md:block text-white ">Ramanujan Society of Research</p>
+            <p className="text-2xl lg:3xl font-bold hidden md:block text-white ">Ramanujan Society of Research</p>
             <p className="text-xl font-bold md:hidden text-white ">RaSoR</p>
             <p className="text-lg text-yellow-500">IITM BS</p>
           </div>
         </div>
-        <div className={`flex flex-col md:flex-row items-center text-xl text-yellow-300/50 ${isScrolled ? " text-yellow-400" : ' rounded-lg'}`}>
-          <div className={`md:hidden ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
+        <div className={`flex flex-col md:flex-row items-center text-lg text-yellow-300/50 ${isScrolled ? " text-yellow-400" : ' rounded-lg'}`}>
+          <div className="md:flex hidden items-center">
             {sectionNames.map((sectionName, index) => (
-              <Link key={index} to={sectionName.toLowerCase().replace(/\s/g, '-')} smooth={true} duration={500} className="block p-2">
+              <Link
+                key={index}
+                to={sectionName.toLowerCase().replace(/\s/g, '-')}
+                smooth={true}
+                duration={500}
+                className="hover:text-black hover:border-black-50 hover:bg-yellow-400/50 rounded-md transition-all duration-300 p-2 md:p-3"
+              >
                 {sectionName}
               </Link>
             ))}
+            <Link
+              to="collaborate"
+              smooth={true}
+              duration={500}
+              className="hover:text-black hover:border-black-50 hover:bg-green-400 rounded-md transition-all duration-300 p-2 md:p-3"
+            >
+              Contact Us
+            </Link>
           </div>
-          <div className="md:flex hidden items-center">
-  {sectionNames.map((sectionName, index) => (
-    <Link
-      key={index}
-      to={sectionName.toLowerCase().replace(/\s/g, '-')}
-      smooth={true}
-      duration={500}
-      className="hover:text-black hover:border-black-50 hover:bg-yellow-400/50 rounded-md transition-all duration-300 p-2 md:p-3"
-    >
-      {sectionName}
-    </Link>
-  ))}
-  <Link
-    to="collaborate"
-    smooth={true}
-    duration={500}
-    className="hover:text-black hover:border-black-50 hover:bg-green-400 rounded-md transition-all duration-300 p-2 md:p-3"
-  >
-    Contact Us
-  </Link>
-</div>
 
         </div>
         <div className="md:hidden cursor-pointer" onClick={toggleMobileMenu}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            fill="none"
+            fill="white"
             viewBox="0 0 24 24"
             stroke="currentColor"
             className="h-6 w-6"
@@ -130,9 +121,27 @@ const Navbar = () => {
             )}
           </svg>
         </div>
+
+      </div>
+      <div className='flex-row justify-between rounded-lg m-0 p-0 w-full shrink-0 overflow-x-auto'> {/* Add overflow-x-auto to enable horizontal scrolling if needed */}
+      <div className={`md:hidden py-1 px-3 bg-white/50 ring-2 ring-yellow-400 ${isMobileMenuOpen ? 'block': 'hidden'} flex justify-between`}>
+
+          {sectionNames.map((sectionName, index) => (
+            <Link
+              key={index}
+              to={sectionName.toLowerCase().replace(/\s/g, '-')}
+              smooth={true}
+              duration={500}
+              className="block p-3 rounded-full hover:ring-2 ring-black hover:bg-red-900"
+            >
+              <img className='h-12 p-2' src={`/icon/${sectionName}.png`} alt={sectionName} />
+            </Link>
+          ))}
+        </div>
       </div>
     </nav>
   );
+
 };
 
 export default Navbar;
