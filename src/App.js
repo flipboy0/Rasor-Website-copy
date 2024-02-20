@@ -11,6 +11,7 @@ import Research from './components/Home_page/Research/research';
 import Collaborate from './components/Home_page/Collaborate/collaborate';
 import ContactPage from './components/Home_page/ContactCollaboration/ContactPage';
 import CollaborationPage from './components/Home_page/ContactCollaboration/CollaborationPage';
+import EventTabs from './components/Events/Index';
 
 import '@fontsource-variable/faustina';
 import '@fontsource/roboto-condensed';
@@ -30,6 +31,7 @@ function App() {
     <Newsletter/>
     <Collaborate />
     </>} />
+          <Route path='/events-section' element={<EventTabs />} />
           <Route path="/update-section" element={<Update />} />
           <Route path="/research-sectiion" element={<Research />} />
           <Route path="/blog-section" element={<Blog />} />
