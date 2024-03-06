@@ -28,7 +28,7 @@ const BlogPostCard2 = (props) => {
               />
               <span className="blog-post-card2-text4 ml-2 font-semibold">{props.author}</span>
             </div>
-            <a className="blog-post-card2-text5 text-black font-semibold" href={props.link}>Read More -&gt;</a>
+            <a className="pl-2 blog-post-card2-text5 text-red-700 font-semibold" href={props.link}>Read More -&gt;</a>
           </div>
         </div>
       </div>
@@ -43,7 +43,7 @@ BlogPostCard2.defaultProps = {
     'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&ixlib=rb-1.2.1&w=1300',
   rootClassName: '',
   image_alt: 'image',
-  label: 'ENTERPRISE',
+  label: '',
   description:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non volutpat turpis. Mauris luctus rutrum mi ut rhoncus. Integer in dignissim tortor. Lorem ipsum dolor sit amet, consectetur adipiscing ...',
   profile_src:
