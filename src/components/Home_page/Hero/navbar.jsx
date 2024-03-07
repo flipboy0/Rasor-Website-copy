@@ -1,6 +1,7 @@
 // Navbar.js
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-scroll';
+import { useNavigate } from 'react-router-dom';
 import logo from "./img_src/Rasor_Logo.png";
 import 'animate.css';
 
@@ -51,7 +52,23 @@ const Navbar = () => {
   };
 
   // Define an array of section names for mobile menu
-  const sectionNames = ['Home', 'Update', 'Research', 'Blog', 'Newsletter'];;
+  const sectionNames = [
+    {name:'Home',
+     address: "/"}, 
+
+    {name:'Update',
+     address: "/update"},
+
+     {name:'Research',
+     address: "/research"},
+
+     {name:'Blog',
+     address: "/blogs"},
+
+     {name:'Newsletter',
+     address: "/newsletter"},
+    ];
+    const navigate = useNavigate();
 
   return (
     <nav className={`${isScrolled ? ' bg-red-900 shadow-md' : ' bg-gradient-to-r from-brown to-white to-black'
@@ -76,16 +93,16 @@ const Navbar = () => {
             {sectionNames.map((sectionName, index) => (
               <Link
                 key={index}
-                to={sectionName.toLowerCase().replace(/\s/g, '-')}
+                onClick={()=>navigate(sectionName.address)}
                 smooth={true}
                 duration={500}
                 className="hover:text-black hover:border-black-50 hover:bg-yellow-400/50 rounded-md transition-all duration-300 p-2 md:p-3"
               >
-                {sectionName}
+                {sectionName.name}
               </Link>
             ))}
             <Link
-              to="collaborate"
+              onClick={()=>navigate("/contact-us")}
               smooth={true}
               duration={500}
               className="hover:text-black hover:border-black-50 hover:bg-green-400 rounded-md transition-all duration-300 p-2 md:p-3"
@@ -128,7 +145,7 @@ const Navbar = () => {
           {sectionNames.map((sectionName, index) => (
             <Link
               key={index}
-              to={sectionName.toLowerCase().replace(/\s/g, '-')}
+              onClick={()=>navigate(sectionName.address)}
               smooth={true}
               duration={500}
               className="block p-3 rounded-full hover:ring-2 ring-black hover:bg-red-900"
