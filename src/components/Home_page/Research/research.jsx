@@ -12,7 +12,7 @@ function Research(){
     <div className="bg-white overflow-hidden rounded-[15px] shadow-2xl md:flex justify-center pb-10 md:pb-0">
         <div className="grid-flow-col grid-cols-1">
             <div className="md:pl-15 pt-8 flex md:flex-row flex-col-reverse" >
-                <div className="faustina-600 text-black sm:text-5xl text-4xl md:text-left text-center md:pl-20 pl:10 pr-5">
+                <div className="faustina-600 text-black sm:text-5xl text-4xl md:text-left text-center md:pl-20 pl:10 md:pr-5 pr-0">
                     Research Summit’23
                 </div>
                 <div className="shrink-0 flex space-x-[-30px] md:justify-start md:items-start items-center justify-center">
