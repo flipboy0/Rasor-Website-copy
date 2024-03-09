@@ -44,7 +44,7 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
       clearTimeout(timeoutRef.current);
     };
-  }, []);
+  },);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);

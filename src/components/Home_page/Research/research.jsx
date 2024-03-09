@@ -16,8 +16,8 @@ function Research(){
                     Research Summit’23
                 </div>
                 <div className="shrink-0 flex space-x-[-30px] md:justify-start md:items-start items-center justify-center">
-                    <img className="w-30 h-20" src={Paradox}/>
-                    <img className="w-30 h-20 bottom-0" src={Rasor} />
+                    <img className="w-30 h-20" src={Paradox} alt="Paradox"/>
+                    <img className="w-30 h-20 bottom-0" src={Rasor} alt="Rasor" />
                 </div>
             </div>
             <h2 className="roboto-condensed text-gray-400 sm:text-2xl md:text-left text-xl md:pl-20 pt-5 pl-10 pr-10 text-center">The flagship event of RaSoR
@@ -27,7 +27,7 @@ function Research(){
                 Join us for our flagship event, the Research Summit '23, where we delve into the latest trends and methodologies in research. Featuring workshops and presentations by esteemed scholars, this summit will ignite creativity and innovation in the pursuit of groundbreaking discoveries.<br />                    
                 </h2>
                 <h2 className="text-[#851815] underline text-2xl">
-                    <a href="#">Know more</a>
+                    <a href="https://example.com/">Know more</a>
                 </h2>
                 
             </div>

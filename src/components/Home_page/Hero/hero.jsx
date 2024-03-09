@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
 import Navbar from './navbar';
 import background from "./img_src/rasor_hero_bg.png";
-import scrollDownIcon from "./img_src/scroll down sign.png";
 import 'animate.css';
 
 const Hero = () => {
