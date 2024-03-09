@@ -1,0 +1,274 @@
+*{
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: borderbox;
+  }
+
+/* main container  */
+.recent-blogs {
+    height: auto;
+    display: flex;
+    position: relative;
+    max-width: auto;
+    align-items: center;
+    padding-top: 40px;
+    border-color: #851815;
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: var(--dl-space-space-halfunit);
+    justify-content: center;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 13px;
+  }
+  
+
+  /* This container contains the blog post >> image + text  */
+  .container {
+    top: 30px;
+    left: -48px;
+    width: 282px;
+    height: 37px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    animation-name: slideInLeft; 
+    animation-delay: 0s;
+    animation-duration: 1200ms;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0); 
+    }
+  }
+  
+
+  .text {
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    font-size: 24px;
+  }
+  .container1 {
+    top: 7px;
+    flex: 0 0 auto;
+    left: 0px;
+    width: 178px;
+    height: 22px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    border-color: rgba(120, 120, 120, 0.4);
+    border-style: dashed;
+    background-color: #851815;
+  }
+
+
+  /* the left and right scroll buttons were created if we are supposed to show more than three blogs in the recent tab  */
+  .left-scroll-btn {
+    top: 305px;
+    left: 40px;
+    color: rgb(223, 162, 58);
+    position: absolute;
+    font-size: 100px;
+    transition: 0.3s;
+    animation-name: fadeIn;
+    animation-delay: 0s;
+    animation-duration: 1500ms;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+  }
+  
+  .right-scroll-btn {
+    top: 305px;
+    color: rgb(223, 162, 58);
+    right: 40px;
+    position: absolute;
+    font-size: 100px;
+    transition: 0.3s;
+    animation-name: fadeIn;
+    animation-delay: 0s;
+    animation-duration: 1500ms;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+  }
+  
+  .container2 {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .container3 {
+    display: flex;
+    align-items: center;
+    border-color: var(--dl-color-gray-black);
+    border-style: hidden;
+    border-width: 0px;
+    margin-right: 32px;
+    justify-content: center;
+    animation-name: fadeInPop; /* Apply the combined animation */
+    animation-delay: 0s;
+    animation-duration: 1500ms;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+  }
+  
+  @keyframes fadeInPop {
+    from {
+      opacity: 0; /* Start with opacity 0 */
+      transform: scale(0.5); /* Start with smaller size */
+    }
+    50% {
+      opacity: 1; /* Midway through, fully opaque */
+      transform: scale(1.05); /* Slightly larger size */
+    }
+    to {
+      opacity: 1; /* End with full opacity */
+      transform: scale(1); /* Return to original size */
+    }
+  }
+  
+  .component {
+    text-decoration: none;
+  }
+  .container4 {
+    display: flex;
+    align-items: center;
+    border-color: var(--dl-color-gray-black);
+    border-width: 0px;
+    margin-right: 32px;
+    justify-content: space-between;
+    animation-name: fadeInPopDelayed; /* Apply the combined animation with delay */
+    animation-delay: 0s; /* Delay the animation by 2 seconds */
+    animation-duration: 1500ms;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+  }
+  
+  @keyframes fadeInPopDelayed {
+    0% {
+      opacity: 0; /* Start with opacity 0 */
+      transform: scale(0.5); /* Start with smaller size */
+    }
+    50% {
+      opacity: 1; /* Midway through, fully opaque */
+      transform: scale(1.05); /* Slightly larger size */
+    }
+    100% {
+      opacity: 1; /* End with full opacity */
+      transform: scale(1); /* Return to original size */
+    }
+  }
+  
+  .component1 {
+    text-decoration: none;
+  }
+  .container5 {
+    display: flex;
+    align-items: center;
+    border-color: var(--dl-color-gray-black);
+    border-width: 0px;
+    justify-content: space-between;
+    animation-name: fadeInPopNoDelay; /* Apply the combined animation without delay */
+    animation-delay: 0s; /* No delay */
+    animation-duration: 1500ms;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+  }
+  
+  @keyframes fadeInPopNoDelay {
+    0% {
+      opacity: 0; /* Start with opacity 0 */
+      transform: scale(0.5); /* Start with smaller size */
+    }
+    50% {
+      opacity: 1; /* Midway through, fully opaque */
+      transform: scale(1.05); /* Slightly larger size */
+    }
+    100% {
+      opacity: 1; /* End with full opacity */
+      transform: scale(1); /* Return to original size */
+    }
+  }
+  
+  .component2 {
+    text-decoration: none;
+  }
+
+
+
+  @media(max-width: 600px) {
+    .recent-blogs {
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        padding-top: 32px;
+        padding-left: var(--dl-space-space-unit);
+        padding-right: var(--dl-space-space-unit);
+        padding-bottom: 32px;
+    }
+
+    .container2 {
+        max-width: 334px; /* Set maximum width */
+        width: 100%; /* Occupy full width */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center items horizontally */
+        margin-left: auto; /* Center container by pushing it to the right */
+        margin-right: auto; /* Center container by pushing it to the left */
+    }
+
+    .BlogPostCard1 {
+        width: 100%;
+    }
+
+    .container4,
+    .container5 {
+        display: none;
+    }
+}
+
+@media(max-width: 479px) {
+    .recent-blogs {
+        align-items: center;
+        justify-content: center;
+        padding-top: 32px;
+        padding-left: var(--dl-space-space-unit);
+        padding-right: var(--dl-space-space-unit);
+        padding-bottom: 32px;
+    }
+
+    .container2 {
+        align-items: center;
+        justify-content: center;
+        max-width: 334px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container5 {
+        display: none;
+    }
+  }

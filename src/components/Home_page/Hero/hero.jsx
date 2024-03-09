@@ -36,8 +36,10 @@ const Hero = () => {
           <h1 className="text-3xl md:text-5xl font-bold m-4 animate__animated animate__fadeInDown">
             Ramanujan Society of Research
           </h1>
-          <p className="lg:text-lg text-sm mb-8 max-w-2xl mx-auto animate__animated animate__fadeInUp border-t-[3px] border-yellow-500/45 pt-6" id='content'>
-          At RaSoR, we honor the legacy of Srinivasa Ramanujan, the mathematics genius whose brilliance inspires us to strive for excellence in research. Located at IIT Madras, our society is committed to nurturing a community of enthusiastic students driven to push the boundaries of knowledge in diverse fields. RaSoR serves as a platform for aspiring researchers to Ignite their Passion, Exhibit their Skills, and Receive the Necessary Training to effectively Publish, Protect, and Promote their Research Contributions.
+          <p className="lg:text-lg text-sm mb-8 max-w-2xl mx-auto animate__animated animate__fadeInUp border-t-[3px] border-yellow-500/45 pt-6">
+            Lorem ipsum dolor sit amet consectetur. Cras turpis lectus morbi
+            lobortis at fermentum nisl consequat urna. Lorem diam est semper sed
+            purus tellus volutpat varius mattis. Adipiscing eget r
           </p>
         </div>
       </div>
