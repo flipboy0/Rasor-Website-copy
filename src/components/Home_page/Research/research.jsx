@@ -7,7 +7,7 @@ function Research(){
     const backgroundImageUrl = '/students/Mask_copy.png';
     return(
         
-<div className="research-bg p-20">
+<div className="research-bg p-5 md:p-15 lg:p-20">
     
     <div className="bg-white overflow-hidden rounded-[15px] shadow-2xl md:flex justify-center pb-10 md:pb-0">
         <div className="grid-flow-col grid-cols-1">
