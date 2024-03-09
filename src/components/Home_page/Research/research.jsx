@@ -7,9 +7,9 @@ function Research(){
     const backgroundImageUrl = '/students/Mask_copy.png';
     return(
         
-<div id="research" className="research-bg p-5 md:p-15 lg:p-20">
+<div className="research-bg p-20">
     
-    <div className="bg-white rounded-[15px] shadow-2xl md:flex justify-center">
+    <div className="bg-white overflow-hidden rounded-[15px] shadow-2xl md:flex justify-center pb-10 md:pb-0">
         <div className="grid-flow-col grid-cols-1">
             <div className="md:pl-15 pt-8 flex md:flex-row flex-col-reverse" >
                 <div className="faustina-600 text-black sm:text-5xl text-4xl md:text-left text-center md:pl-20 pl:10 pr-5">
@@ -31,11 +31,11 @@ function Research(){
                 </h2>
                 
             </div>
-            <div className="inter md:pl-20 pl-10 pt-5 flex flex-col items-center space-y-5 md:pb-[100px]">
-                <button className="md:w-[450px] w-[270px] h-[40px] hover:bg-[#dc9f2c] self-center text-white text-xl shadow-md py-2 px-4 border bg-[#DFA43A] hover:border-transparent rounded">
+            <div className="inter lg:pl-20 pt-5 flex flex-col items-center space-y-5  md:pb-10">
+            <button className="md:w-[450px] md:h-[50px] w-[300px] h-[50px] hover:bg-[#dc9f2c] text-white text-2xl shadow-md py-2 px-4 border bg-[#DFA43A] hover:border-transparent rounded">
                     Register
                 </button>
-                <button className="md:w-[450px] w-[270px] text-center h-[40px] bg-transparent hover:bg-gray-100 text-[#DFA43A] text-2xl shadow-md  py-2 px-4 border border-[#DFA43A] hover:border-transparent rounded">
+                <button className="md:w-[450px] md:h-[50px] w-[300px] h-[50px] bg-transparent hover:bg-gray-100 text-[#DFA43A] text-2xl shadow-md  py-2 px-4 border border-[#DFA43A] hover:border-transparent rounded">
                     Download brochure
                 </button>
                 
@@ -43,11 +43,11 @@ function Research(){
             
         </div>
     
-      <div  className=" overflow-hidden rounded-t-lg rounded-l-lg lg:w-1/2 shrink-0" style={{ backgroundImage: `url(${backgroundImageUrl})`, backgroundSize: 'cover', backgroundPosition: 'left' }}>
+      <div  className="lg:w-1/2 shrink-0" style={{ backgroundImage: `url(${backgroundImageUrl})`, backgroundSize: 'cover', backgroundPosition: 'left' }}>
       </div>
       
     </div>
-  </div>
+</div>
     )
 }
 
