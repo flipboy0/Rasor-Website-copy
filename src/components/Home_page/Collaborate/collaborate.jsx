@@ -4,7 +4,7 @@ import Typical from "react-typical";
 function Collaborate() {
     return (
         <>
-            <div id="collaborate" className="my-5 sm:my-10 lg:my-20 flex flex-col justify-center items-center space-y-3 sm:space-y-5 lg:space-y-10">
+            <div id="collaborate" className="bg-[#fff] my-5 sm:my-10 lg:my-20 flex flex-col justify-center items-center space-y-3 sm:space-y-5 lg:space-y-10">
                 <div className=" bg-white w-full roboto-slab-500 sm:text-2xl text-2xl lg:text-3xl flex flex-col justify-center items-center space-y-2 sm:space-y-3 lg:space-y-4">
                     <h1 className="text-[#040404] font-medium">Want to</h1>
                     <h1 className="font-semibold bg-gradient-to-r from-[#DFA23A] via-[#FFC660] to-[#E3AF52] bg-clip-text text-3xl md:text-4xl lg:text-5xl text-transparent">

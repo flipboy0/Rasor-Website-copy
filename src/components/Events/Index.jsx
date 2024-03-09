@@ -106,7 +106,7 @@ const EventTabs = () => {
 //   }, []);
 
   return (
-    <section className='pt-5 px-10 event-tabs gap-8 overflow-hidden m-4'>
+    <section className='pt-[120px] px-10 event-tabs gap-8 overflow-hidden m-4'>
       <Tab.Group >
         <Tab.List className='flex justify-center text-center rounded-[50px] border-2 border-black text-black items-center h-[50px]'>
           {Object.keys(categories).map((category, index) => (

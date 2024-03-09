@@ -54,7 +54,7 @@ const ProfileCard = () => {
     }
 
     return (
-        <div className={styles.fontfamily}>
+        <div className={`${styles.fontfamily}`}>
             <p className='my-5 py-5 text-5xl text-center bg-[#851815] text-white mt-0 font-normal font-mono'>Meet the <span className='font-extrabold text-[#DFA43A]'>TEAM.</span></p>
             <br />
             <div className="hidden lg:flex justify-center mb-12 gap-5">

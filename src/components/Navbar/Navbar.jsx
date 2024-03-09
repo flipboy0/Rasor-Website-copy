@@ -2,10 +2,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-scroll';
 import { useNavigate } from 'react-router-dom';
-import logo from "./img_src/Rasor_Logo.png";
+import logo from "../Home_page/Hero/img_src/Rasor_Logo.png"
 import 'animate.css';
 
+
+
 const Navbar = () => {
+    
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -68,25 +71,26 @@ const Navbar = () => {
     ];
     const navigate = useNavigate();
 
+    
+    
+
   return (
-    <nav className={`${isScrolled ? ' bg-red-900 shadow-md' : ' bg-gradient-to-r from-brown to-white to-black'
-      } fixed top-0 left-0 right-0 z-50 p-2 transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full '
-      }`}
+    <nav className="bg-red-900 shadow-md fixed top-0 left-0 right-0 z-50 p-2 transition-all duration-300"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <div className="container mx-auto flex flex-row justify-between items-center">
         <div className="flex items-center mb-4 md:mb-0">
           <Link to="home" smooth={true} duration={500}>
-            <img src={logo} alt="Logo" className={`ml-2 rounded-full  ${isScrolled ? "w-20 h-20" : "w-25 h-25"}`} />
+            <img src={logo} alt="Logo" className={`ml-2 rounded-ful "w-20 h-20`} />
           </Link>
-          <div className={`ml-2 ${isScrolled ? 'opacity-100' : 'opacity-0 invisible'}`}>
+          <div className={`ml-2`}>
             <p className="text-2xl lg:3xl font-bold hidden md:block text-white ">Ramanujan Society of Research</p>
             <p className="text-xl font-bold md:hidden text-white ">RaSoR</p>
             <p className="text-lg text-yellow-500">IITM BS</p>
           </div>
         </div>
-        <div className={`flex flex-col md:flex-row items-center text-lg text-yellow-300/50 ${isScrolled ? " text-yellow-400" : ' rounded-lg'}`}>
+        <div className={`flex flex-col md:flex-row items-center text-lg text-yellow-400 rounded-lg`}>
           <div className="md:flex hidden items-center">
             {sectionNames.map((sectionName, index) => (
               <Link
@@ -100,8 +104,8 @@ const Navbar = () => {
               </Link>
             ))}
             <Link
+              onClick={()=>navigate("/")}
               to='newsletter'
-              
               smooth={true}
               duration={500}
               className="hover:text-black hover:border-black-50 hover:bg-yellow-400/50 rounded-md transition-all duration-300 p-2 md:p-3"

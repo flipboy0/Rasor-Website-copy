@@ -38,7 +38,9 @@ const Hero = () => {
           <h1 className="text-3xl md:text-5xl font-bold m-4 animate__animated animate__fadeInDown"            >
             Ramanujan Society of Research
           </h1>
+          
           <p className="lg:text-lg text-sm mb-8 max-w-2xl mx-auto animate__animated animate__fadeInUp border-t-[3px] border-yellow-500/45 pt-6">
+          
             Lorem ipsum dolor sit amet consectetur. Cras turpis lectus morbi
             lobortis at fermentum nisl consequat urna. Lorem diam est semper sed
             purus tellus volutpat varius mattis. Adipiscing eget r
