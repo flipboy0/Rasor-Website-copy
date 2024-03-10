@@ -8,6 +8,7 @@ import BlogLogo from "../Home_page/Hero/img_src/icon/Blog.png"
 import HomeLogo from "../Home_page/Hero/img_src/icon/Home.png"
 import ResearchLogo from "../Home_page/Hero/img_src/icon/Research.png"
 import UpdateLogo from "../Home_page/Hero/img_src/icon/Update.png"
+import NewsletterLogo from "../Home_page/Hero/img_src/icon/Newsletter.png"
 
 
 
@@ -172,6 +173,16 @@ const Navbar = () => {
               <img className='h-12 p-2' src={sectionName.logo} alt={sectionName.name} />
             </Link>
           ))}
+          <Link
+              
+              onClick={()=>navigate("/")}
+              to='newsletter'
+              smooth={true}
+              duration={500}
+              className="block p-3 rounded-full hover:ring-2 ring-black hover:bg-red-900"
+            >
+              <img className='h-12 p-2' src={NewsletterLogo} alt="Newsletter" />
+            </Link>
         </div>
       </div>
     </nav>
