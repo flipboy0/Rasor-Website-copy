@@ -6,8 +6,9 @@ import logo from "../Home_page/Hero/img_src/Rasor_Logo.png"
 import 'animate.css';
 import BlogLogo from "../Home_page/Hero/img_src/icon/Blog.png"
 import HomeLogo from "../Home_page/Hero/img_src/icon/Home.png"
-import ResearchLogo from "../Home_page/Hero/img_src/icon/Research.png"
 import UpdateLogo from "../Home_page/Hero/img_src/icon/Update.png"
+import ResearchLogo from "../Home_page/Hero/img_src/icon/Research.png"
+import ContactLogo from "../Home_page/Hero/img_src/icon/Contact.png"
 import NewsletterLogo from "../Home_page/Hero/img_src/icon/Newsletter.png"
 
 
@@ -78,6 +79,22 @@ const Navbar = () => {
      logo:BlogLogo},
 
     ];
+
+    const MobNavSection = [
+      {name:'Home',
+       address: "/",
+       logo: HomeLogo}, 
+  
+       {name:'Research',
+       address: "/research",
+       logo:ResearchLogo},
+  
+       {name:'Blog',
+       address: "/blogs",
+       logo:BlogLogo},
+  
+      ];
+
     const navigate = useNavigate();
 
     
@@ -162,15 +179,15 @@ const Navbar = () => {
       <div className='flex-row justify-between rounded-lg m-0 p-0 w-full shrink-0 overflow-x-auto'> {/* Add overflow-x-auto to enable horizontal scrolling if needed */}
       <div className={`md:hidden py-1 px-3 bg-white/50 ring-2 ring-yellow-400 ${isMobileMenuOpen ? 'block': 'hidden'} flex justify-between`}>
 
-          {sectionNames.map((sectionName, index) => (
+          {MobNavSection.map((MobNavSection, index) => (
             <Link
               key={index}
-              onClick={()=>navigate(sectionName.address)}
+              onClick={()=>navigate(MobNavSection.address)}
               smooth={true}
               duration={500}
               className="block p-3 rounded-full hover:ring-2 ring-black hover:bg-red-900"
             >
-              <img className='h-12 p-2' src={sectionName.logo} alt={sectionName.name} />
+              <img className='h-12 p-2' src={MobNavSection.logo} alt={MobNavSection.name} />
             </Link>
           ))}
           <Link
@@ -182,6 +199,16 @@ const Navbar = () => {
               className="block p-3 rounded-full hover:ring-2 ring-black hover:bg-red-900"
             >
               <img className='h-12 p-2' src={NewsletterLogo} alt="Newsletter" />
+            </Link>
+            <Link
+              
+              onClick={()=>navigate("/contact-us")}
+       
+              smooth={true}
+              duration={500}
+              className="block p-3 rounded-full hover:ring-2 ring-black hover:bg-red-900"
+            >
+              <img className='h-12 p-2' src={ContactLogo} alt="Contact Us" />
             </Link>
         </div>
       </div>
