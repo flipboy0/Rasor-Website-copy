@@ -4,6 +4,10 @@ import { Link } from 'react-scroll';
 import { useNavigate } from 'react-router-dom';
 import logo from "../Home_page/Hero/img_src/Rasor_Logo.png"
 import 'animate.css';
+import BlogLogo from "../Home_page/Hero/img_src/icon/Blog.png"
+import HomeLogo from "../Home_page/Hero/img_src/icon/Home.png"
+import ResearchLogo from "../Home_page/Hero/img_src/icon/Research.png"
+import UpdateLogo from "../Home_page/Hero/img_src/icon/Update.png"
 
 
 
@@ -48,7 +52,7 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
       clearTimeout(timeoutRef.current);
     };
-  }, []);
+  }, );
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -57,16 +61,20 @@ const Navbar = () => {
   // Define an array of section names for mobile menu
   const sectionNames = [
     {name:'Home',
-     address: "/"}, 
+     address: "/",
+     logo: HomeLogo}, 
 
     {name:'Update',
-     address: "/update"},
+     address: "/update",
+     logo:UpdateLogo},
 
      {name:'Research',
-     address: "/research"},
+     address: "/research",
+     logo:ResearchLogo},
 
      {name:'Blog',
-     address: "/blogs"},
+     address: "/blogs",
+     logo:BlogLogo},
 
     ];
     const navigate = useNavigate();
@@ -161,7 +169,7 @@ const Navbar = () => {
               duration={500}
               className="block p-3 rounded-full hover:ring-2 ring-black hover:bg-red-900"
             >
-              <img className='h-12 p-2' src={`/icon/${sectionName}.png`} alt={sectionName} />
+              <img className='h-12 p-2' src={sectionName.logo} alt={sectionName.name} />
             </Link>
           ))}
         </div>
