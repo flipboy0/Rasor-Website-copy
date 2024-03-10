@@ -111,8 +111,8 @@ const Navbar = () => {
             <img src={logo} alt="Logo" className={`ml-2 rounded-ful "w-20 h-20`} />
           </Link>
           <div className={`ml-2`}>
-            <p className="text-2xl lg:3xl font-bold hidden md:block text-white ">Ramanujan Society of Research</p>
-            <p className="text-xl font-bold md:hidden text-white ">RaSoR</p>
+            <p className="text-2xl lg:3xl font-bold hidden lg:block text-white ">Ramanujan Society of Research</p>
+            <p className="text-xl font-bold lg:hidden text-white ">RaSoR</p>
             <p className="text-lg text-yellow-500">IITM BS</p>
           </div>
         </div>

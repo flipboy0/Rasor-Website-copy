@@ -1,4 +1,5 @@
-import { Tab } from "@headlessui/react";
+import { Tab, Listbox } from "@headlessui/react";
+import { CheckIcon } from '@heroicons/react/20/solid'
 import './index.css'
 import GS_E1 from './assets/GettingStarted/Final.png'
 import R101_E1 from './assets/Research101/E1.png'
@@ -105,14 +106,41 @@ const EventTabs = () => {
 //     setIsMobile(window.matchMedia("screen and (width < 640px)"));
 //   }, []);
 
+const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+
+useEffect(() => {
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 1024);
+  };
+
+  window.addEventListener('resize', handleResize);
+
+ 
+  return () => {
+    window.removeEventListener('resize', handleResize);
+  };
+}, []); 
+
+const data=["Getting Started", "Research 101", "Fireside Chat", "Research Xplore"];
+
+
+
+const [selectedCategory, setSelectedCategory] = useState("Getting Started");
+
+  const handleCategorySelect = (category) => {
+    setSelectedCategory(category);
+  };
+
+
+
   return (
-    <section className='pt-[120px] px-10 event-tabs gap-8 overflow-hidden m-4'>
-      <Tab.Group >
-        <Tab.List className='flex justify-center text-center rounded-[50px] border-2 border-black text-black items-center h-[50px]'>
+    <section className='pt-[120px] flex flex-col justify-center px-10 event-tabs gap-8 overflow-hidden m-4'>
+      {!isMobile && (<Tab.Group >
+        <Tab.List className={`${isMobile ? "flex flex-col mt-10":"flex border-2 border-black"} justify-center text-center rounded-[50px]  text-black items-center h-[50px]`}>
           {Object.keys(categories).map((category, index) => (
             <Tab key={category}
               className={({selected})=>
-              `${selected ? 'bg-white text-black' : 'bg-[#fff]' } ${index === 0 ? 'rounded-l-[50px]':'border-l-2 border-black'} ${index === ((Object.keys(categories).length)-1) ? 'rounded-r-[50px]' : ''}  text-3xl hover:bg-[#f87171] hover:text-white flex-grow h-full`
+              `${selected ? 'bg-white text-black' : 'bg-[#fff]' } ${isMobile ? "":`${index === 0 ? 'rounded-l-[50px]':'border-l-2 border-black'} ${index === ((Object.keys(categories).length)-1) ? 'rounded-r-[50px]' : ''}`} text-3xl hover:bg-[#f87171] hover:text-white flex-grow h-full`
               }
               >
               <h2 >{category}</h2>
@@ -136,15 +164,78 @@ const EventTabs = () => {
                    
                 {categories[category].cards && categories[category].cards.map((item, i) => (
                   <Card item={item} key={i} />
-                
-                
                 ))}
                 </div>
               </Tab.Panel>
             ))}
           </Tab.Panels>
         </div>
-      </Tab.Group>
+      </Tab.Group>)}
+      <div className="flex justify-center">
+      {isMobile && (<Listbox value={selectedCategory} onChange={handleCategorySelect}>
+        <Listbox.Button className="border w-[60%] md:w-[40%] flex gap-3 justify-center border-gray-300 bg-white rounded-md shadow-sm px-4 py-2">
+          {selectedCategory} <p>🔽</p>
+        </Listbox.Button>
+        <Listbox.Options className="w-[60%] sm:w-[40%] absolute z-10 mt-2 bg-white rounded-md shadow-lg">
+          {Object.keys(categories).map((category, index) => (
+            <Listbox.Option
+              key={index}
+              value={category}
+              className={({ active }) =>
+                `${active ? "text-white bg-indigo-600" : "text-gray-900"}
+                          cursor-default select-none relative py-2 pl-3 pr-9`
+              }
+            >
+              {({ selected, active }) => (
+                <>
+                  <span
+                    className={`${
+                      selected ? "font-semibold" : "font-normal"
+                    } block truncate`}
+                  >
+                    {category}
+                  </span>
+                  {selected ? (
+                    <span
+                      className={`${
+                        active ? "text-white" : "text-indigo-600"
+                      }
+                                absolute inset-y-0 right-0 flex items-center pr-4`}
+                    >
+                      <CheckIcon
+                        className="h-5 w-5"
+                        aria-hidden="true"
+                      />
+                    </span>
+                  ) : null}
+                </>
+              )}
+            </Listbox.Option>
+          ))}
+        </Listbox.Options>
+      </Listbox>)}
+      </div>
+
+        {isMobile && (<div className="p-8 flex flex-col items-center justify-center">
+        <div>
+                  <h1 className="pt-10 text-2xl font-bold">
+                    {selectedCategory}
+                  </h1>
+                </div>
+        {selectedCategory && (
+        <div className="border-x-2 w-[500px] my-10 py-5">
+          <Banner item={categories[selectedCategory]} />
+        </div>
+      )}
+
+      <div className="flex gap-x-[66px]">
+        {selectedCategory &&
+          categories[selectedCategory].cards.map((item, index) => (
+            <Card key={index} item={item} />
+          ))}
+      </div>
+        </div>)}
+      
     </section>
   );
 };
