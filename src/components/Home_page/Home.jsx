@@ -5,6 +5,7 @@ import Blog from './Blogs/Blog';
 import Newsletter from './Newsletter/Newsletter';
 import Research from './Research/research';
 import Collaborate from './Collaborate/collaborate';
+import ProfileCard from './Teams/Teams';
 import '@fontsource-variable/faustina';
 import '@fontsource/roboto-condensed';
 import '@fontsource-variable/inter';
@@ -19,6 +20,7 @@ function Home() {
         <Blog/>
         <Newsletter/>
         <Collaborate />
+        <ProfileCard />
        
       </>
         

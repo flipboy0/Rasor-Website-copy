@@ -26,6 +26,10 @@ const router = createBrowserRouter([
         element: <EventTabs />
       },
       {
+        path:"/update",
+        element: <EventTabs />
+      },
+      {
         path: "/contact-us",
         element: (
                   <>
