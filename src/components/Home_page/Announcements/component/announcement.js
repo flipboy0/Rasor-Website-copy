@@ -5,14 +5,14 @@ import "animate.css"
 
 const data = [
   {
-    name: `John Morgan`,
+    name: `Research 101`,
     img: `/students/John_Morgan.jpg`,
-    review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.`
+    review: `Our dynamic event series tailored to aspiring researchers seeking to delve into the foundations of academic exploration...`
   },
   {
-    name: `Ellie Anderson`,
+    name: `Fireside Chat`,
     img: `/students/Ellie_Anderson.jpg`,
-    review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.`
+    review: `Our intimate event series where industry leaders and seasoned professionals come together to share insights, experiences...`
   },
   {
     name: `Nia Adebayo`,

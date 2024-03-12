@@ -11,7 +11,7 @@ import YouTube from './assets/Youtube.png'
 
 
 import { useEffect, useState } from "react";
-const DriveImage = id => `https://drive.google.com/u/0/uc?id=${id}&export=download`;
+//const DriveImage = id => `https://drive.google.com/u/0/uc?id=${id}&export=download`;
 
 
 
@@ -121,7 +121,7 @@ useEffect(() => {
   };
 }, []); 
 
-const data=["Getting Started", "Research 101", "Fireside Chat", "Research Xplore"];
+
 
 
 
