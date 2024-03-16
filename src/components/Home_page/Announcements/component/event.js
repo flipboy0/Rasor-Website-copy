@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Event = () => {
   const event = {
@@ -16,14 +17,9 @@ const Event = () => {
   </div>
 
   <div className="pr-6 self-center">
-  <a
-      href="www.google.com"
-      target="_blank"
-      rel="noreferrer noopener"
-      className="relative self-center bg-[#DFA23A] text-black hover:bg-red-800 px-4 py-2 rounded-full before:rounded-full transition-colors before:absolute before:bg-red-400 before:inset-0 before:-z-[1] before:h-full before:w-full before:border-4 before:border-transparent before:transition-all before:content-[''] before:hover:top-1 before:hover:left-1 before:hover:border-red-300"
-    >
+    <Link to="/events-section" target="_blank" className="relative self-center bg-[#DFA23A] text-black hover:bg-red-800 px-4 py-2 rounded-full before:rounded-full transition-colors before:absolute before:bg-red-400 before:inset-0 before:-z-[1] before:h-full before:w-full before:border-4 before:border-transparent before:transition-all before:content-[''] before:hover:top-1 before:hover:left-1 before:hover:border-red-300">
       📅
-    </a>
+  </Link>
 </div>
 </header>
       <div className='h-20'></div>

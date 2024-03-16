@@ -1,0 +1,98 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: borderbox;
+  }
+
+.search-bar {
+    height: 180px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding-top: 0px;
+    padding-left: 48px;
+    padding-right: 48px;
+    flex-direction: column;
+    padding-bottom: 0px;
+    background-size: cover;
+    justify-content: center;
+    background-position: center;
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    margin: auto; 
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .textinput {
+    width: 900px;
+    height: 20px;
+    font-size: 18px;
+    border: 1px solid black; /* Add border */
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 1rem; /* Use shorthand padding */
+  }
+  
+  .button {
+    background-color: black;
+    color: white;
+    height: 54px;
+    width: 100px;
+    font-size: 1.2rem; /* Decrease font size */
+    transition: background-color 0.3s, color 0.3s;
+    margin-left: var(--dl-space-space-unit);
+    border: 1px solid black; /* Add border */
+    border-left-width: 0px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .button:hover {
+    background-color: transparent;
+    color: black;
+  }
+  
+  
+
+  @media(max-width: 600px) {
+    .search-bar {
+      padding-left: 32px;
+      padding-right: 32px;
+      height: 120px;
+      display: flex;
+      position: relative;
+      align-items: center;
+      padding-left: 48px;
+      padding-right: 48px;
+      flex-direction: column;
+      padding-bottom: 0px;
+      background-size: cover;
+      justify-content: center;
+      background-position: center;
+      padding-top: 0px;
+    }
+    .button {
+      background-color: black;
+      color: white;
+      height: 54px;
+      /* width: 170px; */
+      font-size: 0.8rem; /* Decrease font size */
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+      margin-left: var(--dl-space-space-unit);
+      border-left-width: 0px;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+      padding: 0 20px;
+    }
+
+  .button:hover {
+    background-color: transparent;
+    color: black;
+  }
+  }

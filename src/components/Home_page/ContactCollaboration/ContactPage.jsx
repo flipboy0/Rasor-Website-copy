@@ -4,7 +4,7 @@ import arrowImage from './arrow.png';
 
 export default function ContactPage() {
   return (
-    <div className="bg-[#F6F6F6]">
+    <div className="bg-[#F6F6F6] pt-[60px]">
       <div className="flex justify-center items-center h-screen">
         <div className="flex w-screen mx-auto">
         <div className="w-2/3 flex flex-col justify-center items-center"> 
