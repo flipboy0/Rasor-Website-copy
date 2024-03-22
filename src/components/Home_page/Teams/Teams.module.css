@@ -51,11 +51,19 @@
 }
 
 .avatar {
-    width: 210px;
-    height: 210px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%; /* Circular image */
     margin-bottom: 20px;
     transition: transform 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+    .avatar {
+        width: 210px;
+        height: 210px;
+
+    }
 }
 
 .avatar:hover {
