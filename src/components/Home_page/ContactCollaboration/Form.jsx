@@ -60,7 +60,7 @@ export default function Form({ bgColor, formType }) {
     }
   };
   return (
-    <div className="flex justify-center items-center h-screen bg=[#F6F6F6]">
+    <div className="flex justify-center sm:pt-10 pt-5 w-full bg=[#F6F6F6]">
       <div className="w-full max-w-md">
         <form className="bg-white shadow-lg rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
           <div className="mb-4">
