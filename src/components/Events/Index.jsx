@@ -157,10 +157,10 @@ const [selectedCategory, setSelectedCategory] = useState("Getting Started");
                     {category}
                   </h1>
                 </div>
-                <div className="border-x-2 w-[500px] my-10 py-5">
+                <div className="flex justify-center">
                 {categories[category].description && <Banner item={categories[category]} />}
                 </div>
-                <div className="flex gap-x-[66px]">
+                <div className="flex gap-x-[66px] ">
                    
                 {categories[category].cards && categories[category].cards.map((item, i) => (
                   <Card item={item} key={i} />
@@ -223,15 +223,17 @@ const [selectedCategory, setSelectedCategory] = useState("Getting Started");
                   </h1>
                 </div>
         {selectedCategory && (
-        <div className="border-x-2 w-[500px] my-10 py-5">
+        <div className="flex justify-center">
           <Banner item={categories[selectedCategory]} />
         </div>
       )}
 
-      <div className="flex gap-x-[66px]">
+      <div className="flex flex-col gap-y-[66px]">
         {selectedCategory &&
           categories[selectedCategory].cards.map((item, index) => (
+            
             <Card key={index} item={item} />
+
           ))}
       </div>
         </div>)}
@@ -242,11 +244,11 @@ const [selectedCategory, setSelectedCategory] = useState("Getting Started");
 
 export const Banner = ({item})=>{
     return(
-        <>
+        <div className="border-x-2 px-2 lg:w-1/2 md:w-3/4 w-full my-10 py-5">
             <p className=" roboto-condensed-300 text-[#515151] text-xl text-center">
                 {item.description}
             </p>
-        </>
+        </div>
     )
 }
 
@@ -254,8 +256,8 @@ export const Banner = ({item})=>{
 export const Card = ({ item }) => {
   return (
     <div>
-        <div class="card rounded-lg w-[390px] h-[490px] shadow-md overflow-hidden relative">
-            <div className="w-[390px] h-[490px] rounded-lg shadow-md overflow-hidden relative">
+        <div class="card rounded-lg w-[290px] h-[390px] sm:w-[390px] sm:h-[490px] shadow-md overflow-hidden relative">
+            <div className="w-[290px] h-[390px] sm:w-[390px] sm:h-[490px] rounded-lg shadow-md overflow-hidden relative">
                 <img src={item.image} className="poster duration-[400ms] w-full h-full object-scale-down " />
             </div>
             
