@@ -256,8 +256,8 @@ export const Banner = ({item})=>{
 export const Card = ({ item }) => {
   return (
     <div>
-        <div class="card rounded-lg  w-[390px] sm:h-[490px] shadow-md overflow-hidden relative">
-            <div className=" w-[390px] sm:h-[490px] rounded-lg shadow-md overflow-hidden relative">
+        <div class="card rounded-lg w-[340px] h-[427px] sm:w-[390px] sm:h-[490px] shadow-md overflow-hidden relative">
+            <div className="w-[340px] h-[427px] sm:w-[390px] sm:h-[490px] rounded-lg shadow-md overflow-hidden relative">
                 <img src={item.image} className="poster duration-[400ms] w-full h-full object-scale-down " />
             </div>
             
