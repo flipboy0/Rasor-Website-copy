@@ -70,10 +70,6 @@ const Navbar = () => {
      address: "/update",
      logo:UpdateLogo},
 
-     {name:'Research',
-     address: "/research",
-     logo:ResearchLogo},
-
      {name:'Blog',
      address: "/blogs",
      logo:BlogLogo},
@@ -85,9 +81,7 @@ const Navbar = () => {
        address: "/",
        logo: HomeLogo}, 
   
-       {name:'Research',
-       address: "/research",
-       logo:ResearchLogo},
+       
   
        {name:'Blog',
        address: "/blogs",
@@ -97,7 +91,7 @@ const Navbar = () => {
     const navigate = useNavigate();
 
   return (
-    <nav className={`${isScrolled ? ' bg-red-900 shadow-md' : ' bg-gradient-to-r from-brown to-white to-black'
+    <nav className={`${isScrolled ? ' bg-red-900 shadow-md' : ' bg-gradient-to-r from-brown to-black'
       } fixed top-0 left-0 right-0 z-50 p-2 transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full '
       }`}
       onMouseEnter={handleMouseEnter}
@@ -127,6 +121,14 @@ const Navbar = () => {
                 {sectionName.name}
               </Link>
             ))}
+            <Link
+            to='research'
+            smooth={true}
+              duration={500}
+              className="hover:text-black hover:border-black-50 hover:bg-yellow-400/50 rounded-md transition-all duration-300 p-2 md:p-3"
+            >
+              Research
+            </Link>
             <Link
               to='newsletter'
               
@@ -188,6 +190,16 @@ const Navbar = () => {
               <img className='h-12 p-2' src={MobNavSection.logo} alt={MobNavSection.name} />
             </Link>
           ))}
+          <Link
+              
+              onClick={()=>navigate("/")}
+              to='research'
+              smooth={true}
+              duration={500}
+              className="block p-3 rounded-full hover:ring-2 ring-black hover:bg-red-900"
+            >
+              <img className='h-12 p-2' src={ResearchLogo} alt="Research" />
+            </Link>
           <Link
               
               onClick={()=>navigate("/")}

@@ -70,10 +70,7 @@ const Navbar = () => {
      address: "/update",
      logo:UpdateLogo},
 
-     {name:'Research',
-     address: "/research",
-     logo:ResearchLogo},
-
+     
      {name:'Blog',
      address: "/blogs",
      logo:BlogLogo},
@@ -85,9 +82,7 @@ const Navbar = () => {
        address: "/",
        logo: HomeLogo}, 
   
-       {name:'Research',
-       address: "/research",
-       logo:ResearchLogo},
+       
   
        {name:'Blog',
        address: "/blogs",
@@ -129,6 +124,15 @@ const Navbar = () => {
                 {sectionName.name}
               </Link>
             ))}
+            <Link
+              onClick={()=>navigate("/")}
+              to='research'
+              smooth={true}
+              duration={500}
+              className="hover:text-black hover:border-black-50 hover:bg-yellow-400/50 rounded-md transition-all duration-300 p-2 md:p-3"
+            >
+              Research
+            </Link>
             <Link
               onClick={()=>navigate("/")}
               to='newsletter'
@@ -190,6 +194,16 @@ const Navbar = () => {
               <img className='h-12 p-2' src={MobNavSection.logo} alt={MobNavSection.name} />
             </Link>
           ))}
+          <Link
+              
+              onClick={()=>navigate("/")}
+              to='research'
+              smooth={true}
+              duration={500}
+              className="block p-3 rounded-full hover:ring-2 ring-black hover:bg-red-900"
+            >
+              <img className='h-12 p-2' src={ResearchLogo} alt="Research" />
+            </Link>
           <Link
               
               onClick={()=>navigate("/")}
