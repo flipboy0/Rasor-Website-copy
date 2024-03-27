@@ -7,7 +7,7 @@ export default function CollaborationPage() {
     <div className={styles.formbg}>
       <div className="flex justify-center items-center">
         <div className="md:flex-row flex items-center  flex-col-reverse w-full  mx-autoshadow-lg rounded-lg overflow-hidden">
-          <div className="">
+          <div className="px-5 w-full">
             <Form bgColor="bg-[#A11D19]" formType="collaboration" />
           </div>
           <div className="w-1/2 p-4 flex justify-center items-center"> 
