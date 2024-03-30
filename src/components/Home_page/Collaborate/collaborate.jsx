@@ -1,26 +1,53 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Typewriter from 'typewriter-effect';
 
 function Collaborate() {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const section = document.getElementById('collaborate');
+            if (!section) return;
+
+            const sectionTop = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            // You can adjust this threshold as needed
+            const threshold = windowHeight * 0.9;
+
+            setIsVisible(sectionTop < threshold);
+        };
+
+   
+        window.addEventListener('scroll', handleScroll);
+
+  
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <>
             <div id="collaborate" className="bg-white py-5 sm:py-10 lg:py-20 flex flex-col justify-center items-center">
-                <div className=" bg-white w-full roboto-slab-500 sm:text-2xl p-8 text-2xl lg:text-3xl flex flex-col justify-center items-center space-y-2 sm:space-y-3 lg:space-y-4">
+                <div className="bg-white w-full roboto-slab-500 sm:text-2xl p-8 text-2xl lg:text-3xl flex flex-col justify-center items-center space-y-2 sm:space-y-3 lg:space-y-4">
                     <h1 className="text-[#040404] font-medium">Want to</h1>
                     <h1 className="font-semibold bg-gradient-to-r from-[#DFA23A] via-[#FFC660] to-[#E3AF52] bg-clip-text text-3xl md:text-4xl lg:text-5xl text-transparent">
-                        <Typewriter
-                            onInit={(typewriter) => {
-                                typewriter.typeString('COLLABORATE?')
-                                    .pauseFor(2000)
-                                    .deleteAll()
-                                    .typeString('ASSOCIATE?')
-                                    .pauseFor(2000)
-                                    .deleteAll()
-                                    .typeString('GROW?')
-                                    .pauseFor(2000)
-                                    .start();
-                            }}
-                        />
+                        {isVisible && (
+                            <Typewriter
+                                onInit={(typewriter) => {
+                                    typewriter.typeString('COLLABORATE?')
+                                        .pauseFor(2000)
+                                        .deleteAll()
+                                        .typeString('ASSOCIATE?')
+                                        .pauseFor(2000)
+                                        .deleteAll()
+                                        .typeString('GROW?')
+                                        .pauseFor(2000)
+                                        .start();
+                                }}
+                            />
+                        )}
                     </h1>
                 </div>
 
