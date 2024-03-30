@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 function Announcement() {
   
@@ -11,14 +12,13 @@ function Announcement() {
   </div>
 
   <div className="pr-20 md:pr-[60px] lg:pr-[100px] self-center">
-  <a
-      href="www.google.com"
-      target="_blank"
+  <Link
+     to="/events-section"
       rel="noreferrer noopener"
       className="relative self-center bg-red-700 text-white hover:text-yellow-400 px-4 py-2 rounded-full before:rounded-full transition-colors before:absolute before:bg-yellow-400 before:inset-0 before:-z-[1] before:h-full before:w-full before:border-4 before:border-transparent before:transition-all before:content-[''] before:hover:top-1 before:hover:left-1 before:hover:border-yellow-300"
     >
       View&gt;&gt;
-    </a>
+      </Link>
 </div>
 </header>
       
