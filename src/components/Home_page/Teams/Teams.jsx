@@ -69,7 +69,7 @@ const ProfileCard = ()=>{
                                 <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="ml-3 text-gray-500">
                                     <img src={linkedinIcon} alt="LinkedIn" className="w-5 h-5" />
                                 </a>
-                                <a href={member.email} target="_blank" rel="noopener noreferrer" className="ml-3 text-gray-500">
+                                <a href={`mailto:${member.email}`} target="_blank" rel="noopener noreferrer" className="ml-3 text-gray-500">
                                     <img src={EmailIcon} alt="LinkedIn" className="w-[22px] h-[22px]" />
                                 </a>
                                 </span>
@@ -90,7 +90,7 @@ const ProfileCard = ()=>{
                                 <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="ml-3 text-gray-500">
                                     <img src={linkedinIcon} alt="LinkedIn" className="w-5 h-5" />
                                 </a>
-                                <a href={member.email} target="_blank" rel="noopener noreferrer" className="ml-3 text-gray-500">
+                                <a href={`mailto:${member.email}`} target="_blank" rel="noopener noreferrer" className="ml-3 text-gray-500">
                                     <img src={EmailIcon} alt="LinkedIn" className="w-[22px] h-[22px]" />
                                 </a>
                             </span>
@@ -112,7 +112,7 @@ const ProfileCard = ()=>{
                                 <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="ml-3 text-gray-500">
                                     <img src={linkedinIcon} alt="LinkedIn" className="w-5 h-5" />
                                 </a>
-                                <a href={member.email} target="_blank" rel="noopener noreferrer" className="ml-3 text-gray-500">
+                                <a href={`mailto:${member.email}`} target="_blank" rel="noopener noreferrer" className="ml-3 text-gray-500">
                                     <img src={EmailIcon} alt="LinkedIn" className="w-[22px] h-[22px]" />
                                 </a>
                             </span>
@@ -144,7 +144,7 @@ const ProfileCard = ()=>{
                                 <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="ml-3 text-gray-500">
                                     <img src={linkedinIcon} alt="LinkedIn" className="w-5 h-5" />
                                 </a>
-                                <a href={member.email} target="_blank" rel="noopener noreferrer" className="ml-3 text-gray-500">
+                                <a href={`mailto:${member.email}`} target="_blank" rel="noopener noreferrer" className="ml-3 text-gray-500">
                                     <img src={EmailIcon} alt="LinkedIn" className="w-[22px] h-[22px]" />
                                 </a>
                             </span>
@@ -162,7 +162,7 @@ const ProfileCard = ()=>{
                                 <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="ml-3 text-gray-500">
                                     <img src={linkedinIcon} alt="LinkedIn" className="w-5 h-5" />
                                 </a>
-                                <a href={member.email} target="_blank" rel="noopener noreferrer" className="ml-3 text-gray-500">
+                                <a href={`mailto:${member.email}`} target="_blank" rel="noopener noreferrer" className="ml-3 text-gray-500">
                                     <img src={EmailIcon} alt="LinkedIn" className="w-[22px] h-[22px]" />
                                 </a>
                             </span>
