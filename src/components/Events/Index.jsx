@@ -17,20 +17,7 @@ import { useEffect, useState } from "react";
 
 const EventTabs = () => {
   const categories = {
-    "Getting Started": {
-      description:
-        "Start your journey as a member of RaSoR, through these specially curated videos",
-      cards: [
-        {
-          title: "Orientation",
-          description:
-            "Why and What’s Rasor, What drives the founders and Why they started it | What we have for YOU - The Orientation",
-          link: "https://www.youtube.com/watch?v=ucsNu-1jeKk",
-          image: GS_E1,
-          priority: true,
-        },
-      ],
-    },
+   
 
     "Research 101": {
       description:
@@ -63,7 +50,7 @@ const EventTabs = () => {
         },
       ],
     },
-    "Fireside Chat": {
+    "FireSide Chat": {
       description:
         "Experience the thrill, where leading researchers share their personal journeys in research and engage in interactive discussions with our community members",
       cards: [
@@ -89,6 +76,20 @@ const EventTabs = () => {
           link: "https://www.youtube.com/watch?v=E_jtvWxBm2Y",
           image: RX_E1,
           priority: false,
+        },
+      ],
+    },
+    "Other": {
+      description:
+        "Start your journey as a member of RaSoR, through these specially curated videos",
+      cards: [
+        {
+          title: "Orientation",
+          description:
+            "Why and What’s Rasor, What drives the founders and Why they started it | What we have for YOU - The Orientation",
+          link: "https://www.youtube.com/watch?v=ucsNu-1jeKk",
+          image: GS_E1,
+          priority: true,
         },
       ],
     },
