@@ -13,7 +13,7 @@ function Research(){
         <div className="grid-flow-col grid-cols-1">
             <div className="md:pl-15 pt-8 flex md:flex-row flex-col-reverse" >
                 <div className="faustina-600 text-black sm:text-5xl text-4xl md:text-left text-center md:pl-20 pl:10 md:pr-5 pr-0">
-                    Research Summit’23
+                    Research Summit’24
                 </div>
                 <div className="shrink-0 flex space-x-[-30px] md:justify-start md:items-start items-center justify-center">
                     <img className="w-30 h-20" src={Paradox} alt="Paradox"/>
@@ -24,20 +24,20 @@ function Research(){
             </h2>
             <div className="roboto-condensed md:pl-20 pl-10 pt-5 pr-10">
                 <h2 className="text-lg sm:text-xl text-[#515151] overflow-hidden">
-                Join us for our flagship event, the Research Summit '23, where we delve into the latest trends and methodologies in research. Featuring workshops and presentations by esteemed scholars, this summit will ignite creativity and innovation in the pursuit of groundbreaking discoveries.<br />                    
+                Join us for our flagship event, the Research Summit '24, where we delve into the latest trends and methodologies in research. Featuring workshops and presentations by esteemed scholars, this summit will ignite creativity and innovation in the pursuit of groundbreaking discoveries.<br />                    
                 </h2>
                 <h2 className="text-[#851815] underline text-2xl">
-                    <a href="https://example.com/">Know more</a>
+                    <a href="https://chhavikant-01.github.io/Research-Summit-2024-Coming-Soon/" target="_blank">Know more</a>
                 </h2>
                 
             </div>
             <div className="inter lg:pl-20 pt-5 flex flex-col items-center space-y-5  md:pb-10">
-            <button className="md:w-[450px] md:h-[50px] w-[300px] h-[50px] hover:bg-[#dc9f2c] text-white text-2xl shadow-md py-2 px-4 border bg-[#DFA43A] hover:border-transparent rounded">
+            <a href="https://chhavikant-01.github.io/Research-Summit-2024-Coming-Soon/" target="_blank"><button className="md:w-[450px] md:h-[50px] w-[300px] h-[50px] hover:bg-[#dc9f2c] text-white text-2xl shadow-md py-2 px-4 border bg-[#DFA43A] hover:border-transparent rounded">
                     Register
-                </button>
-                <button className="md:w-[450px] md:h-[50px] w-[300px] h-[50px] bg-transparent hover:bg-gray-100 text-[#DFA43A] text-2xl shadow-md  py-2 px-4 border border-[#DFA43A] hover:border-transparent rounded">
+                </button></a>
+                <a href="https://chhavikant-01.github.io/Research-Summit-2024-Coming-Soon/" target="_blank"><button className="md:w-[450px] md:h-[50px] w-[300px] h-[50px] bg-transparent hover:bg-gray-100 text-[#DFA43A] text-2xl shadow-md  py-2 px-4 border border-[#DFA43A] hover:border-transparent rounded">
                     Download brochure
-                </button>
+                </button></a>
                 
             </div>
             

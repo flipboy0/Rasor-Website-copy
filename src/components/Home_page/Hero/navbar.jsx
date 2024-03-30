@@ -116,7 +116,7 @@ const Navbar = () => {
                 onClick={()=>navigate(sectionName.address)}
                 smooth={true}
                 duration={500}
-                className="hover:text-black hover:border-black-50 hover:bg-yellow-400/50 rounded-md transition-all duration-300 p-2 md:p-3"
+                className="hover:text-black hover:border-black-50 hover:bg-yellow-400/50 rounded-md transition-all duration-300 p-2 md:p-3 cursor-pointer "
               >
                 {sectionName.name}
               </Link>
@@ -125,7 +125,7 @@ const Navbar = () => {
             to='research'
             smooth={true}
               duration={500}
-              className="hover:text-black hover:border-black-50 hover:bg-yellow-400/50 rounded-md transition-all duration-300 p-2 md:p-3"
+              className="hover:text-black hover:border-black-50 hover:bg-yellow-400/50 rounded-md transition-all duration-300 p-2 md:p-3 cursor-pointer "
             >
               Research
             </Link>
@@ -134,7 +134,7 @@ const Navbar = () => {
               
               smooth={true}
               duration={500}
-              className="hover:text-black hover:border-black-50 hover:bg-yellow-400/50 rounded-md transition-all duration-300 p-2 md:p-3"
+              className="hover:text-black hover:border-black-50 hover:bg-yellow-400/50 rounded-md transition-all duration-300 p-2 md:p-3 cursor-pointer "
             >
               Newsletter
             </Link>
@@ -142,7 +142,7 @@ const Navbar = () => {
               onClick={()=>navigate("/contact-us")}
               smooth={true}
               duration={500}
-              className="hover:text-black hover:border-black-50 hover:bg-yellow-400/50 rounded-md transition-all duration-300 p-2 md:p-3"
+              className="hover:text-black hover:border-black-50 hover:bg-yellow-400/50 rounded-md transition-all duration-300 p-2 md:p-3 cursor-pointer "
             >
               Contact Us
             </Link>
