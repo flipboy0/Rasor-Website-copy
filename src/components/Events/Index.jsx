@@ -1,7 +1,7 @@
 import { Tab, Listbox } from "@headlessui/react";
 import { CheckIcon } from '@heroicons/react/20/solid'
 import './index.css'
-import GS_E1 from './assets/GettingStarted/Final.png'
+import GS_E1 from './assets/GettingStarted/GSOC.svg'
 import R101_E1 from './assets/Research101/E1.png'
 import R101_E2 from './assets/Research101/E2.png'
 import R101_E3 from './assets/Research101/E3.png'
