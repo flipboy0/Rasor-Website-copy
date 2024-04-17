@@ -5,6 +5,7 @@ import Announcement from './components/Home/Announcement/Announcement';
 import Events from './components/Home/Events/Events';
 import Vision from './components/Home/Vision/Vision';
 import Counter from './components/Home/Counter/Counter';
+import RecentEvents from './components/Home/Events/RecentEvents';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
     <Announcement />
     <Vision />
     <Events />
+    
     <Collaborate />
     <Counter />
    </>
