@@ -4,6 +4,7 @@ import Collaborate from './components/Home/Collaborate/Collaborate';
 import Announcement from './components/Home/Announcement/Announcement';
 import Events from './components/Home/Events/Events';
 import Vision from './components/Home/Vision/Vision';
+import Counter from './components/Home/Counter/Counter';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
     <Vision />
     <Events />
     <Collaborate />
+    <Counter />
    </>
   );
 }
