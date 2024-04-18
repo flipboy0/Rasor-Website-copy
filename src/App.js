@@ -6,6 +6,7 @@ import Events from './components/Home/Events/Events';
 import Vision from './components/Home/Vision/Vision';
 import Counter from './components/Home/Counter/Counter';
 import RecentEvents from './components/Home/Events/RecentEvents';
+import CounterSection from './components/Home/Counter/CounterSection';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
     <Events />
     <RecentEvents />
     <Collaborate />
-    <Counter />
+    
+    <CounterSection />
    </>
   );
 }

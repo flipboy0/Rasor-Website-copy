@@ -29,19 +29,19 @@ function useCountUp({ endValue, duration = 1000}) {
   return { count, setStart };
 }
 
-export default function Counter() {
-    const data = [{"years": 69},{"members":169},{"departments": 6},{"staff": 1069},{"events":9}]
-    const { count, setStart } = useCountUp({ endValue: 1000, duration: 2000 });
+export default function Counter(props) {
+    
+    const { count, setStart } = useCountUp({ endValue: props.value, duration: 2000 });
     
     return (
         <>
             <div className="flex w-full py-10 justify-around bg-[#861D1D]">
-                {data.map((item, index) => (
-                    <div key={index} className="">
+                
+                    <div className="">
                         <p className="text-white">{count}</p>
-                        <p className="text-white">{Object.keys(item)[0]}</p>
+                        <p className="text-white">{props.label}</p>
                     </div>
-                ))}
+                
             </div>
             <button className="counter__button" onClick={() => setStart(true)}>
                 Start Counting
