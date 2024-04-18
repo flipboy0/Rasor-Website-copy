@@ -5,31 +5,34 @@ import Img3 from "./Assets/E1.png"
 
 const Events = () => {
   return (
-    <div className='flex w-full h-[80vh] bg-[#861D1D]'>
+    <div className='flex w-full h-[85vh] bg-[#861D1D]'>
         <div className='flex flex-col w-full h-full pr-[80px] px-[40px] pb-[80px] border-r-2 border-white'>
-            <div className='flex justify-center h-1/5 py-10'>
-                <h1 className='text-white text-4xl'>
+            <div className='flex justify-center relative py-10 w-full'>
+                <h1 className='text-white text-4xl '>
                     UPCOMING EVENTS
                 </h1>
+                <button className='bg-white p-2 rounded-lg absolute right-0 top-10'>
+                <svg width="40" height="40" viewBox="0 0 50 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M37.7849 7.12502V8.62502H39.2849H48.4991V12.4688V16.3125H1.49915V12.4688V12.4688L1.49919 8.62502H10.7134H12.2134V7.12502V1.50002H16.3563V7.12502V8.62502H17.8563H32.142H33.642V7.12502V1.5L37.7849 1.50001V7.12502ZM1.49915 51.6563V22.875H48.4991V54.5V55.5H1.49927L1.49915 51.6563Z" stroke="#861D1D" stroke-width="3"/>
+                    <rect x="7" y="29" width="10" height="4" fill="#861D1D"/>
+                    <rect x="21" y="29" width="8" height="4" fill="#861D1D"/>
+                    <rect x="7" y="44" width="10" height="4" fill="#861D1D"/>
+                    <rect x="21" y="44" width="8" height="4" fill="#861D1D"/>
+                    <rect x="33" y="29" width="10" height="4" fill="#861D1D"/>
+                    <rect x="33" y="44" width="10" height="4" fill="#861D1D"/>
+                </svg>
 
-                {/* <button className='text-white border-2 border-white px-2'>
-                    View all
-                </button> */}
+                </button>
+
+                
             </div>
-            <div className='flex gap-[60px] h-4/5 justify-center pt-10'>
+            <div className='flex gap-[60px] h-[80%] justify-center pt-10'>
                 <img src={Img1} alt="" className=' h-full' />
                 <img src={Img2} alt="" className=' h-full' />
                 
             </div>
 
         </div>
-        {/* <div className='flex flex-col gap-y-4 w-2/5 h-full justify-center'>
-            <img src={Img3} alt="Img3" className='h-5/6 object-contain' />
-            <div className='w-full flex justify-around'>
-                <button className='py-2 px-5 bg-[#DFA43A] text-white'>Download Brochure</button>
-                <button className='py-2 px-5 bg-[#dedbdb] text-[#DFA43A]'>Register Now</button>
-            </div>
-        </div> */}
 
     </div>
   )

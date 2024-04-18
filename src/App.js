@@ -13,7 +13,7 @@ function App() {
     <Announcement />
     <Vision />
     <Events />
-    
+    <RecentEvents />
     <Collaborate />
     <Counter />
    </>
