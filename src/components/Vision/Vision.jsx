@@ -6,7 +6,7 @@ const data = [
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus culpa alias distinctio quos, quidem, quas,'
     },
     {
-        heading: "Leader's Desk",
+        heading: "Society's Message",
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus culpa alias distinctio quos, quidem, quas,'
     },
 ]

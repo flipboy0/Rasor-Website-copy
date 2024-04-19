@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Typewriter from 'typewriter-effect';
+import Img1 from "./Assets/image1.svg"
+import Img2 from "./Assets/image2.svg"
 
 function Collaborate() {
     const [isVisible, setIsVisible] = useState(false);
@@ -28,8 +30,19 @@ function Collaborate() {
     }, []);
 
     return (
-        <>
-            <div id="collaborate" className="bg-white py-5 sm:py-10 lg:py-20 flex flex-col justify-center items-center">
+        <div className='flex flex-col justify-center items-center w-full'>
+            <div className='bg-[#DFA43A] w-full py-4'>
+                <h1 className='text-center text-5xl'>We're Connected With</h1>
+            </div>
+            <div className='flex justify-center items-center gap-10 py-[60px] border-b-2 w-[50%] border-[#DFA43A]'>
+                <div>
+                    <img src={Img1} className='w-[100px]' alt='img1' />
+                </div>
+                <div>
+                    <img src={Img2} className='w-[390px]' alt='img2' />
+                </div>
+            </div>
+            <div id="collaborate" className="bg-white w-full pb-5 sm:py-10 lg:pb-20 flex flex-col justify-center items-center">
                 <div className="bg-white w-full roboto-slab-500 sm:text-2xl p-8 text-2xl lg:text-3xl flex flex-col justify-center items-center space-y-2 sm:space-y-3 lg:space-y-4">
                     <h1 className="text-[#040404] font-medium">Want to</h1>
                     <h1 className="font-semibold bg-gradient-to-r from-[#DFA23A] via-[#FFC660] to-[#E3AF52] bg-clip-text text-3xl md:text-4xl lg:text-5xl text-transparent">
@@ -55,7 +68,7 @@ function Collaborate() {
                     Contact Us
                 </button>
             </div>
-        </>
+        </div>
     );
 }
 
