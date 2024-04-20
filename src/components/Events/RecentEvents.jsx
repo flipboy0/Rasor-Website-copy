@@ -1,6 +1,7 @@
 import React from 'react'
 import Img1 from "./Assets/Final.png"
 import Img2 from "./Assets/GSOC.svg"
+import Button from '../Button/Button'
 
 function RecentEvents() {
   return (
@@ -10,7 +11,10 @@ function RecentEvents() {
                 <h1 className='text-4xl'>
                     RECENT EVENTS
                 </h1>
-                <button className='text-[#861D1D] text-xl border-2 border-[#861D1D] px-5'>View all</button>
+                {/* <button className='text-[#861D1D] text-xl border-2 border-[#861D1D] px-5'>View all</button> */}
+                <div className='text-xl'>
+                    <Button link='https://www.google.com/' label='View all' />
+                </div>
 
                 
             </div>

@@ -3,6 +3,7 @@ import Img1 from "./Assets/Final.png"
 import Img2 from "./Assets/GSOC.svg"
 import Img3 from "./Assets/E1.png"
 
+
 const Events = () => {
   return (
     <div className='flex w-full h-[85vh] bg-[#861D1D]'>
