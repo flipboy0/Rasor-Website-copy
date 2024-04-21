@@ -5,12 +5,16 @@ import Events from '../components/Events/Events';
 import CounterSection from '../components/Counter/Counter';
 import RecentEvents from '../components/Events/RecentEvents';
 import Collaborate from '../components/Collaborate/Collaborate';
+import Navbar from '../components/Navbar/Nvbar';
+import Hero from '../components/Hero/Hero';
 
 
 
 const Home = () => {
   return (
     <div>
+      <Navbar/>
+      <Hero/>
     <Announcement />
     <Vision />
     <Events />
