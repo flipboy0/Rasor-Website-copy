@@ -2,7 +2,24 @@ import React from 'react'
 import Img1 from "./Assets/Final.png"
 import Img2 from "./Assets/GSOC.svg"
 import Img3 from "./Assets/E1.png"
+import YouTube from "./Youtube-1.png"
 import "./Events.css"
+
+const data = [
+    {
+      title: "Event 1",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non.",
+      image: Img3,
+      link: "https://www.youtube.com/watch?v=6YbBmqUnoQM",
+      
+    },
+    {
+      title: "Event 2",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non.",
+      image: Img2,
+      link: "https://www.youtube.com/watch?v=6YbBmqUnoQM",
+    }
+]
 
 
 const Events = () => {
@@ -29,8 +46,13 @@ const Events = () => {
                 
             </div>
             <div className='flex gap-[60px] h-[80%] justify-center pt-10'>
-                <img src={Img1} alt="" className='border-[5px] border-white h-full' />
-                <img src={Img2} alt="" className='border-[5px] h-full' />
+                {
+                    data.map((item) => {
+                        return (
+                            <Card item={item} />
+                        )
+                    })  
+                }
                 
             </div>
 
