@@ -14,7 +14,7 @@ const data = [
 
 const Vision = () => {
   return (
-    <div className='flex justify-around items-center my-[80px]'>
+    <div className='flex justify-center gap-x-10 items-center my-[80px]'>
         {data.map((item, index) => (
             <Card key={index} heading={item.heading} text={item.text} />
         ))}
