@@ -18,12 +18,26 @@ const Footer = () => {
 
   return (
     <div className='bg-[#231F20] flex flex-col pb-5'>
-        <div className='py-10 flex gap-10 items-center border-b-2 border-white'>
-            <img src={Logo} alt="logo" className='w-[100px]' />
-            <h1 className='text-white text-2xl'>RAMANUJAN SOCIETY OF RESEARCH<br /><span className='font-thin'>IITM BS DEGREE</span></h1>
+        <div className='flex justify-between px-10'>
+            <div className='py-10 flex gap-10 items-center'>
+                <img src={Logo} alt="logo" className='w-[100px]' />
+                <h1 className='text-white text-2xl'>RAMANUJAN SOCIETY OF RESEARCH<br /><span className='font-thin'>IITM BS DEGREE</span></h1>
+            </div>
+            <div className='py-10 flex gap-10 items-center'>
+                <div className='flex flex-col-reverse gap-y-2'>
+                    <div className='pt-2 flex justify-center items-center gap-2'>
+                        <img src={Mail} alt="logo" className='hover:scale-125 hover:duration-200 duration-200 h-[20px] cursor-pointer' />
+                        <h1 className='font-thin text-white pr-2'>research.society@study.iitm.ac.in</h1>
+                    </div>
+                    <div className='flex justify-center items-center gap-2'>
+                        <img src={LinkedIn} alt="logo" className='hover:scale-125 hover:duration-200 duration-200 h-[20px] cursor-pointer' />
+                        <img src={Insta} alt="logo" className='hover:scale-125 hover:duration-200 duration-200 h-[20px] cursor-pointer' />
+                        <img src={Youtube} alt="logo" className='hover:scale-125 hover:duration-200 duration-200 h-[20px] cursor-pointer' />
+                    </div>
+                </div>
+            </div>
         </div>
-        
-            <div className='py-5 border-b-[1px] border-white'>
+            <div className='py-5 border-b-[1px] border-t-[2px] border-white'>
                 {data.map((item, index) => (
                     <div key={index} className='flex justify-around text-white'>
                         {Object.keys(item).map((key, index) => (
@@ -39,13 +53,10 @@ const Footer = () => {
                     </div>
                 ))}
             </div>
-            <div className='pt-2 flex justify-center items-center gap-2 h-[40px]'>
-               <img src={Mail} alt="logo" className='h-[50%] cursor-pointer' />
-               <h1 className='font-thin text-white border-r-[1px] pr-2 border-white'>research.society@study.iitm.ac.in</h1>
-                <img src={LinkedIn} alt="logo" className='h-[40%] cursor-pointer' />
-                <img src={Insta} alt="logo" className='h-[40%] cursor-pointer' />
-                <img src={Youtube} alt="logo" className='h-[40%] cursor-pointer' />
+            <div className='pt-2 flex justify-center items-center'>
+                <h1 className='font-thin text-[#bfb6b6] pr-2'>© 2024 | All Rights Reserved </h1>
             </div>
+            
         </div>
 
   )

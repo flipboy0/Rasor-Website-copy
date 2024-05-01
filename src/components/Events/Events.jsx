@@ -24,7 +24,7 @@ const data = [
 
 const Events = () => {
   return (
-    <div className='events flex w-full h-[85vh] bg-[#861D1D]'>
+    <div className='events flex w-full  bg-[#861D1D]'>
         <div className='flex flex-col w-full h-full pr-[80px] px-[40px] pb-[80px] border-r-2 border-white'>
             <div className='flex justify-center relative py-10 w-full'>
                 <h1 className='text-white text-4xl '>

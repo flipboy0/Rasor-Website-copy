@@ -27,7 +27,7 @@ const data = [
 
 function RecentEvents() {
   return (
-    <div className='flex w-full h-[85vh]'>
+    <div className='flex w-full'>
         <div className='flex flex-col w-full h-full pr-[80px] px-[40px] pb-[80px] border-r-2 border-white'>
             <div className='flex justify-between py-10 w-full'>
                 <h1 className='text-4xl'>
