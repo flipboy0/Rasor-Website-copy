@@ -2,6 +2,28 @@ import React from 'react'
 import Img1 from "./Assets/Final.png"
 import Img2 from "./Assets/GSOC.svg"
 import Button from '../Button/Button'
+import Card from '../Card/Card'
+
+const data = [
+    {
+        title: "Event 1",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non.",
+        image: Img1,
+        link: "https://www.youtube.com/watch?v=6YbBmqUnoQM",
+    },
+    {
+        title: "Event 2",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non.",
+        image: Img2,
+        link: "https://www.youtube.com/watch?v=6YbBmqUnoQM",
+    },
+    {
+        title: "Event 3",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non.",
+        image: Img1,
+        link: "https://www.youtube.com/watch?v=6YbBmqUnoQM",
+    }
+]
 
 function RecentEvents() {
   return (
@@ -19,9 +41,13 @@ function RecentEvents() {
                 
             </div>
             <div className='flex gap-[60px] h-[80%] justify-center pt-10'>
-                <img src={Img1} alt="" className=' h-full' />
-                <img src={Img2} alt="" className=' h-full' />
-                <img src={Img1} alt="" className=' h-full' />
+                {
+                    data.map((item) => {
+                        return (
+                            <Card item={item} />
+                        )
+                    })
+                }
                 
             </div>
 

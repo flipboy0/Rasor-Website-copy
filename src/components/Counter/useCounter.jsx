@@ -66,7 +66,7 @@ export default function Counter(props) {
     <>
       <div className="counter flex w-full py-10 justify-around bg-[#861D1D]">
         <div className="flex flex-col justify-center items-center">
-          <p className="text-white text-5xl font-semibold">{count}</p>
+          <p className="text-white text-5xl font-semibold">{count}{props.plus}</p>
           <p className="text-white text-xl">{props.label}</p>
         </div>
       </div>

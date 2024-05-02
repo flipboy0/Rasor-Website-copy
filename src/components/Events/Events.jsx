@@ -2,11 +2,29 @@ import React from 'react'
 import Img1 from "./Assets/Final.png"
 import Img2 from "./Assets/GSOC.svg"
 import Img3 from "./Assets/E1.png"
+import Card from "../Card/Card"
+import "./Events.css"
+
+const data = [
+    {
+      title: "Event 1",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non.",
+      image: Img3,
+      link: "https://www.youtube.com/watch?v=6YbBmqUnoQM",
+      
+    },
+    {
+      title: "Event 2",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non.",
+      image: Img2,
+      link: "https://www.youtube.com/watch?v=6YbBmqUnoQM",
+    }
+]
 
 
 const Events = () => {
   return (
-    <div className='flex w-full h-[85vh] bg-[#861D1D]'>
+    <div className='events flex w-full h-[85vh] bg-[#861D1D]'>
         <div className='flex flex-col w-full h-full pr-[80px] px-[40px] pb-[80px] border-r-2 border-white'>
             <div className='flex justify-center relative py-10 w-full'>
                 <h1 className='text-white text-4xl '>
@@ -27,9 +45,14 @@ const Events = () => {
 
                 
             </div>
-            <div className='flex gap-[60px] h-[80%] justify-center pt-10'>
-                <img src={Img1} alt="" className=' h-full' />
-                <img src={Img2} alt="" className=' h-full' />
+            <div className='flex gap-[60px] justify-center pt-10'>
+                {
+                    data.map((item) => {
+                        return (
+                            <Card item={item} />
+                        )
+                    })  
+                }
                 
             </div>
 
@@ -38,5 +61,7 @@ const Events = () => {
     </div>
   )
 }
+
+
 
 export default Events
