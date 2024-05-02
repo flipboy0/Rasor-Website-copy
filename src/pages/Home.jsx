@@ -13,7 +13,7 @@ import Hero from '../components/Hero/Hero';
 const Home = () => {
   return (
     <div>
-      <Navbar/>
+      
       <Hero/>
     <Announcement />
     <Vision />
