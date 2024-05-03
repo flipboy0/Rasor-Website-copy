@@ -1,16 +1,19 @@
 import React, { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import "./Navbar.css";
 
 const Navbar = () => {
     const NavRef = useRef(null);
 
-    useEffect(() => {
+    useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger);
         gsap.to(NavRef.current, {
             position: "relative",
             display: "block",
             ease: "circ.inOut",
+            rotate:360,
             paddingLeft: 0,
             duration: 8, // Start with opacity 0 and transition to opacity 1
             scrollTrigger: {
@@ -19,10 +22,9 @@ const Navbar = () => {
                 scrub: true, // Smoothly animate based on scroll
                 start: "clamp(bottom top)", // Pin starts when the top of the trigger hits the top of the viewport
                 end: "clamp(+=1000)",
-                markers: true, // Pinning ends when the top of the next div hits the top of the viewport
             },
         });
-    }, []);
+    }, {});
 
     const [activeLink, setActiveLink] = useState("Home");
 
@@ -35,7 +37,7 @@ const Navbar = () => {
             <div className="flex flex-row justify-around shadow-sm shadow-red-100 w-full h-[13vh] py-auto">
                 <img
                     ref={NavRef}
-                    className="rounded-full h-[10vh] my-auto p-[-10vw] absolute top-0 left-0"
+                    className="rounded-full h-[10vh] my-auto absolute top-0 left-0"
                     style={{ display: "none" }}
                     src="/logorasor.svg"
                     alt="Logo"
@@ -63,9 +65,9 @@ const Navbar = () => {
                             About
                         </a>
                     </div>
-                    <div>
+                    <div className="dropdown">
                         <a
-                            className={`hover:text-red-800 ${
+                            className={`dropbtn hover:text-red-800 ${
                                 activeLink === "Event" ? "text-red-800 font-bold underline underline-offset-8" : ""
                             }`}
                             href="example.com"
@@ -73,6 +75,13 @@ const Navbar = () => {
                         >
                             Event
                         </a>
+                        <div class="dropdown-content border-t-[1vw] border-opacity-0 pt-4 rounded-md bg-white w-[14vw]">
+    <a className="text-xl mx-2 rounded-lg border-red-800 border-t-4 hover:text-white" href="#" >Reseach 101</a>
+    <a className="text-xl mx-2 rounded-lg hover:text-white" href="#">Fireside Chat</a>
+    <a className="text-xl mx-2 rounded-lg hover:text-white" href="#">Summit</a>
+    <a className="text-xl mx-2 rounded-lg hover:text-white" href="#">Project Luminar</a>
+    <a className="text-xl mx-2 rounded-lg border-b-4 border-red-800 hover:text-white" href="#">Carnival</a>
+  </div>
                     </div>
                     <div>
                         <a
@@ -88,7 +97,7 @@ const Navbar = () => {
                     <div>
                         <a
                             className={`hover:text-red-800 ${
-                                activeLink === "Join Us" ? "text-red-800 font-bold underline underline-offset-8" : ""
+                                activeLink === "Join Us" ? "text-red-800 font-bold underline underline-offset-8 " : ""
                             }`}
                             href="example.com"
                             onClick={() => handleItemClick("Join Us")}
