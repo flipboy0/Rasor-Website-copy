@@ -10,6 +10,7 @@ function ScrollSection() {
   const rightRef = useRef(null);
   const textbox1 =useRef(null);
   const textbox2 =useRef(null);
+  const imgRef = useRef(null);
 
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -25,7 +26,7 @@ function ScrollSection() {
         scrollTrigger: {
           trigger: triggerRef.current,
           start: "top 20%",
-          end: () => "bottom 85%", // Use a function to dynamically set the end trigger
+          end: () => "bottom 80%", // Use a function to dynamically set the end trigger
           pin: ".right",
           pinSpacing: false, // Disable automatic pin spacing
 
@@ -34,7 +35,7 @@ function ScrollSection() {
     );
 
     gsap.to(textbox1.current, {
-      opacity: 0, 
+      opacity: 0,
       scrollTrigger: {
         trigger: textbox1.current,
         toggleActions: "restart pause reverse pause",
@@ -65,11 +66,11 @@ function ScrollSection() {
       <div className="flex flex-col w-2/5 text-black font-semibold self-center mx-[5vw]">
         <div ref={textbox1} className="h-[30vh] mt-[20vh]" >
           <h1 className="text-7xl flex-col">Ramanujan</h1>
-          <span className="text-7xl flex my-3"> Society <img className="rounded-full h-[10vh] my-auto px-5" src="/logorasor.svg" alt="Logo" /></span>
+          <span className="text-7xl flex my-3"> Society <img ref={imgRef} className="rounded-full h-[10vh] my-auto px-5" src="/logorasor.svg" alt="Logo" /></span>
           <h1 className="text-7xl"> of Research</h1>
           <h1 className="text-4xl font-thin mt-5">AN IITM BS DEGREE SOCIETY </h1>
         </div>
-        <div  ref={textbox2} className=" mb-[30vh] opacity-0">
+        <div  ref={textbox2} className=" mb-[20vh] opacity-0">
           <h1 className="text-5xl flex-col">About Us</h1>
           <h1 className="text-2xl font-normal py-[4vh] "> Lorem ipsum dolor sit amet consectetur. Felis volutpat scelerisque laoreet nunc adipiscing dignissim lacinia malesuada gravida. Eu tempor neque convallis volutpat quisque. Nisl neque morbi non nullam vel. Ac massa in mi lectus blandit.</h1>
         </div>
