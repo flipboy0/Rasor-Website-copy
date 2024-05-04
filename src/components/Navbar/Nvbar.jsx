@@ -12,7 +12,7 @@ const Navbar = () => {
         gsap.registerPlugin(ScrollTrigger);
         gsap.to(NavRef.current, {
             position: "relative",
-            display: "block",
+            display: "flex",
             paddingLeft: 0,
             duration: 8, // Start with opacity 0 and transition to opacity 1
             scrollTrigger: {
@@ -20,7 +20,7 @@ const Navbar = () => {
                 toggleActions: "restart pause reverse pause",
                 scrub: true, // Smoothly animate based on scroll
                 start: "clamp(bottom top)", // Pin starts when the top of the trigger hits the top of the viewport
-                end: "clamp(+=1000)",
+                end: "clamp(+=1500)",
                 marker:true,
             },
         });
@@ -45,13 +45,19 @@ const Navbar = () => {
     return (
         <div className="sticky top-0 z-50 bg-white w-full">
             <div className="flex flex-row justify-between shadow-sm pl-[4vw] shadow-red-100 w-full h-[13vh] py-auto">
+                <div ref={NavRef} className="absolute top-0 left-0 flex flex-row gap-4"
+                style={{ display: "none" }}>
                 <img
-                    ref={NavRef}
-                    className="rounded-full h-[10vh] my-auto absolute top-0 left-0"
-                    style={{ display: "none" }}
+                    
+                    className="rounded-full h-[10vh] my-auto"
                     src="/logorasor.svg"
                     alt="Logo"
-                /><div></div>
+                />
+                <div className="flex-col self-center">
+                    <h1 className="font-bold text-3xl tracking-wider ">RaSoR </h1>
+                    <h1 className="text-lg font-light">IITM BS Degree</h1>
+                </div>
+                </div><div></div>
                 <div className="flex flex-row gap-[4vw] p-[2vh] font-thick text-2xl relative self-center pr-[4vw] ">
                     <div>
                         <a
