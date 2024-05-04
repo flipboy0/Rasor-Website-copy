@@ -6,14 +6,13 @@ import "./Navbar.css";
 
 const Navbar = () => {
     const NavRef = useRef(null);
+    const dummyRef = useRef([]);   
 
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger);
         gsap.to(NavRef.current, {
             position: "relative",
             display: "block",
-            ease: "circ.inOut",
-            rotate:360,
             paddingLeft: 0,
             duration: 8, // Start with opacity 0 and transition to opacity 1
             scrollTrigger: {
@@ -22,8 +21,19 @@ const Navbar = () => {
                 scrub: true, // Smoothly animate based on scroll
                 start: "clamp(bottom top)", // Pin starts when the top of the trigger hits the top of the viewport
                 end: "clamp(+=1000)",
+                marker:true,
             },
         });
+        gsap.to(dummyRef.current,{
+            display: "none",
+            scrollTrigger: {
+                trigger: NavRef.current,
+                toggleActions: "restart pause reverse pause",
+                scrub: true, // Smoothly animate based on scroll
+                start: "clamp(bottom top)", // Pin starts when the top of the trigger hits the top of the viewport
+                marker:true,
+            },
+        })
     }, {});
 
     const [activeLink, setActiveLink] = useState("Home");
@@ -34,15 +44,15 @@ const Navbar = () => {
 
     return (
         <div className="sticky top-0 z-50 bg-white w-full">
-            <div className="flex flex-row justify-around shadow-sm shadow-red-100 w-full h-[13vh] py-auto">
+            <div className="flex flex-row justify-between shadow-sm pl-[4vw] shadow-red-100 w-full h-[13vh] py-auto">
                 <img
                     ref={NavRef}
                     className="rounded-full h-[10vh] my-auto absolute top-0 left-0"
                     style={{ display: "none" }}
                     src="/logorasor.svg"
                     alt="Logo"
-                />
-                <div className="flex flex-row gap-[4vw] p-[2vh] font-thick text-2xl relative self-center">
+                /><div></div>
+                <div className="flex flex-row gap-[4vw] p-[2vh] font-thick text-2xl relative self-center pr-[4vw] ">
                     <div>
                         <a
                             className={`hover:text-red-800 ${
@@ -105,7 +115,7 @@ const Navbar = () => {
                             Join Us
                         </a>
                     </div>
-                </div>
+                </div><div ref={dummyRef}></div>
             </div>
         </div>
     );

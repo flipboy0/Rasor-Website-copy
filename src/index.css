@@ -2,7 +2,7 @@
 /* Firefox */
 * {
     scrollbar-width: thin;
-    scrollbar-color: #000000 #fce4d6;
+    scrollbar-color: #000000 #d0d034;
 }
 
 /* Chrome, Edge, and Safari */
@@ -11,14 +11,14 @@
 }
 
 *::-webkit-scrollbar-track {
-    background: #fce4d6;
+    background: #f0ea38;
     border-radius: 5px;
 }
 
 *::-webkit-scrollbar-thumb {
     background: linear-gradient(to bottom, #bcaaa4, #8d6e63);
     border-radius: 14px;
-    border: 3px solid #fce4d6;
+    border: 3px solid rgb(231, 220, 8);
 }
 @tailwind components;
 @tailwind utilities;

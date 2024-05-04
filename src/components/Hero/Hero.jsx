@@ -103,9 +103,9 @@ function ScrollSection() {
         </div>
       </div>
       <div ref={rightRef} className="right lg:max-w-lg lg:w-full md:w-1/2 w-5/6 flex flex-col">
-        <img className="object-cover object-center rounded mx-auto self-center pt-[13vh] pr-[5vw]" alt="hero" src="/MG-1.svg"/>
+        <img className="object-cover z-10 object-center rounded mx-auto self-center pt-[13vh] pr-[5vw]" alt="hero" src="/MG-1.svg"/>
         <img ref={circleRef} className=" absolute object-center rounded mx-auto scale-150 self-center pr-[7vw]" alt="hero" src="/circle.svg"/>
-        <img ref={circle2Ref} className=" absolute object-center rounded mx-auto scale-150 self-center pr-[7vw] scale-0 hidden" alt="hero" src="/circle.svg"/>
+        <img ref={circle2Ref} className=" absolute object-center rounded mx-auto self-center pr-[7vw] scale-0 hidden" alt="hero" src="/circle.svg"/>
       </div>
     </div></>
   );
