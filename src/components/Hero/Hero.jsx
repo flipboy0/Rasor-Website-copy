@@ -11,6 +11,8 @@ function ScrollSection() {
   const textbox1 =useRef(null);
   const textbox2 =useRef(null);
   const imgRef = useRef(null);
+  const circleRef = useRef(null);
+  const circle2Ref = useRef(null);
 
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -46,6 +48,31 @@ function ScrollSection() {
         end: "top top", // Pinning ends when the top of the next div hits the top of the viewport
       },
     });
+
+    gsap.to(circleRef.current,{
+      rotate: 45,
+      scale: 1.5,
+      scrollTrigger: {
+        trigger: circleRef.current,
+        start: "top top",
+        end: "+=100",
+        scrub: true
+      }
+    });
+    gsap.to(circle2Ref.current,{
+      x: "-85vw",
+      ease: "power1.out",
+      duration:5,
+      display: "block",
+      scale: 1.5,
+      scrollTrigger: {
+        trigger: circleRef.current,
+        start: "top top",
+        end: "+=300",
+        scrub: true,
+        marker: true
+      }
+    });
     
     gsap.to(textbox2.current, {
       opacity: 1, 
@@ -70,13 +97,15 @@ function ScrollSection() {
           <h1 className="text-7xl"> of Research</h1>
           <h1 className="text-4xl font-thin mt-5">AN IITM BS DEGREE SOCIETY </h1>
         </div>
-        <div  ref={textbox2} className=" mb-[20vh] opacity-0">
+        <div  ref={textbox2} className=" mb-[25vh] opacity-0">
           <h1 className="text-5xl flex-col">About Us</h1>
-          <h1 className="text-2xl font-normal py-[4vh] "> Lorem ipsum dolor sit amet consectetur. Felis volutpat scelerisque laoreet nunc adipiscing dignissim lacinia malesuada gravida. Eu tempor neque convallis volutpat quisque. Nisl neque morbi non nullam vel. Ac massa in mi lectus blandit.</h1>
+          <h1  className="text-2xl font-normal py-[4vh] "> Lorem ipsum dolor sit amet consectetur. Felis volutpat scelerisque laoreet nunc adipiscing dignissim lacinia malesuada gravida. Eu tempor neque convallis volutpat quisque. Nisl neque morbi non nullam vel. Ac massa in mi lectus blandit.</h1>
         </div>
       </div>
       <div ref={rightRef} className="right lg:max-w-lg lg:w-full md:w-1/2 w-5/6 flex flex-col">
-        <img className="object-cover object-center rounded mx-auto self-center" alt="hero" src="/MG-1.svg"/>
+        <img className="object-cover z-10 object-center rounded mx-auto self-center pt-[13vh] pr-[5vw]" alt="hero" src="/MG-1.svg"/>
+        <img ref={circleRef} className=" absolute object-center rounded mx-auto scale-150 self-center pr-[7vw]" alt="hero" src="/circle.svg"/>
+        <img ref={circle2Ref} className=" absolute object-center rounded mx-auto self-center pr-[7vw] scale-0 hidden" alt="hero" src="/circle.svg"/>
       </div>
     </div></>
   );

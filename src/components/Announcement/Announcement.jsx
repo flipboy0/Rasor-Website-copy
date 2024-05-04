@@ -1,26 +1,12 @@
-import React, { useRef, useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
+import React from 'react'
 import "./Announcement.css"
 import Button from '../Button/Button'
 export const Announcement = () => {
-  const announcementRef = useRef(null)
-  useGSAP(() => {
-    gsap.to(announcementRef.current, {
-      x: "-=80vw",
-      scrollTrigger: {
-        trigger: announcementRef.current,
-        start: "top 40%",
-        end: "bottom 30%",
-        scrub:3
-      }
-    })
-  })
   return (
-    <div ref={announcementRef} className='border-y-2 ring-black ring-1 left-[80vw] pr-10 flex items-center justify-between w-full h-[70px] mt-5 text-xl'>
+    <div className='border-y-2 pr-10 flex items-center justify-between w-full h-[70px] mt-5 text-xl'>
       
-        <div  className='flex w-[80%] bg-[#DFA43A] bg-opacity-40 h-full justify-around items-center pr-5'>
+        <div className='flex w-[20%] justify-center text-white h-full items-center bg-[#DFA43A] text-center'>Announcement</div>
+        <div  className='flex w-[72%] h-full justify-around items-center pr-5'>
           <p class="marquee">
             <span className='text-[#C41E3A]'>
               <a className='' href='https://www.google.com/'>4. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta odio dolorem optio, quia ullam in?
@@ -37,7 +23,12 @@ export const Announcement = () => {
             </span>
           </p>  
         </div>
-        <Button className=' flex w-[15%] justify-center text-2xl text-white h-full items-center bg-red-800 text-center' link='https://www.google.com/' label='Announcement' />
+        <div className='w-[8%] h-full flex items-center justify-center pr-5'>
+        {/* <button className='w-full text-center border-[2px] border-[#861D1D] h-[45px] text-[#861D1D]'>
+                Expand
+        </button> */}
+        <Button link='https://www.google.com/' label='Expand' />
+        </div>
     </div>
   )
 }
