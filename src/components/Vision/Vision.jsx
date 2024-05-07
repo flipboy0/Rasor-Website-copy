@@ -3,7 +3,7 @@ import Button from '../Button/Button'
 
 const data = [
     {
-        heading: 'Vision',
+        heading: 'Journey So Far',
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus culpa alias distinctio quos, quidem, quas,'
     },
     {

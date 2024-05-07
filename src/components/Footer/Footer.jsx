@@ -10,7 +10,7 @@ const Footer = () => {
 
     const data = [
     {"Home":["About us","Announcement","Vision", "Society's Message","Upcoming events","Collaborate", "Achievments"], 
-    "About":["Journey so far","Our Vision","Society's Message","Team","Reports and Brochures"],
+    "About":["Journey so far","Society's Message","Team","Reports and Brochures"],
     "Events":["Research 101", "FireSide Chat", "Research Xplore", "Summit", "Project luminar","Carnivals","Others"],
     "Contacts us":["Student","Organization"],
     "Join us":["Volunteer","Member"]
