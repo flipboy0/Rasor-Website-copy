@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const NavRef = useRef(null);
@@ -59,27 +60,27 @@ const Navbar = () => {
                 </div>
                 </div><div></div>
                 <div className="flex flex-row gap-[4vw] p-[2vh] font-thick text-2xl relative self-center pr-[4vw] ">
-                    <div>
-                        <a
+                     <div>
+                        <Link 
                             className={`hover:text-red-800 ${
                                 activeLink === "Home" ? "text-red-800 font-bold underline underline-offset-8" : ""
                             }`}
-                            href="example.com"
+                            to="/"
                             onClick={() => handleItemClick("Home")}
                         >
                             Home
-                        </a>
+                        </Link>
                     </div>
                     <div>
-                        <a
+                        <Link
                             className={`hover:text-red-800 ${
                                 activeLink === "About" ? "text-red-800 font-bold underline underline-offset-8" : ""
                             }`}
-                            href="example.com"
+                            to={"/about-us"}
                             onClick={() => handleItemClick("About")}
                         >
                             About
-                        </a>
+                        </Link>
                     </div>
                     <div className="dropdown">
                         <a
@@ -92,11 +93,11 @@ const Navbar = () => {
                             Event
                         </a>
                         <div class="dropdown-content border-t-[1vw] border-opacity-0 pt-4 rounded-md bg-white w-[14vw]">
-    <a className="text-xl mx-2 rounded-lg border-red-800 border-t-4 hover:text-white" href="#" >Reseach 101</a>
-    <a className="text-xl mx-2 rounded-lg hover:text-white" href="#">Fireside Chat</a>
-    <a className="text-xl mx-2 rounded-lg hover:text-white" href="#">Summit</a>
-    <a className="text-xl mx-2 rounded-lg hover:text-white" href="#">Project Luminar</a>
-    <a className="text-xl mx-2 rounded-lg border-b-4 border-red-800 hover:text-white" href="#">Carnival</a>
+    <a className="text-xl mx-2 rounded-lg border-red-800 border-t-4 hover:text-white" href="example.com" >Reseach 101</a>
+    <a className="text-xl mx-2 rounded-lg hover:text-white" href="example.com">Fireside Chat</a>
+    <a className="text-xl mx-2 rounded-lg hover:text-white" href="example.com">Summit</a>
+    <a className="text-xl mx-2 rounded-lg hover:text-white" href="example.com">Project Luminar</a>
+    <a className="text-xl mx-2 rounded-lg border-b-4 border-red-800 hover:text-white" href="example.com">Carnival</a>
   </div>
                     </div>
                     <div>

@@ -1,7 +1,10 @@
 import './App.css';
 import Footer from './components/Footer/Footer';
+import Navbar from './components/Navbar/Nvbar';
 import Home from './pages/Home';
 import { useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import AboutUs from './pages/AboutUs';
 
 function App() {
   useEffect(() => {
@@ -24,8 +27,14 @@ function App() {
   
   return (
    <> 
-    <Home />
-    <Footer />
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about-us" element={<AboutUs />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
    </>
   );
 }
