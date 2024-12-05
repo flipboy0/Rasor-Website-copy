@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AboutUs from './pages/AboutUs';
+import Events from './pages/Events';
+import SubEvent from './pages/SubEvent';
 
 function App() {
   useEffect(() => {
@@ -32,6 +34,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/event/:eventId" element={<SubEvent />} />
       </Routes>
       <Footer />
     </BrowserRouter>
