@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import "./Navbar.css";
+import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -71,8 +72,9 @@ const Navbar = () => {
         </div>
         <div></div>
         <div className="flex flex-row gap-[4vw] p-[2vh] font-thick text-2xl relative self-center pr-[4vw] ">
+
           <div>
-            <Link
+            {/* <NavLink
               className={`hover:text-red-800 ${
                 activeLink === "Home"
                   ? "text-red-800 font-bold underline underline-offset-8"
@@ -91,11 +93,24 @@ const Navbar = () => {
                   ? "text-red-800 font-bold underline underline-offset-8"
                   : ""
               }`}
+            > */}
+            <NavLink
+              className={({isActive}) => `hover:text-red-800 ${isActive && "text-red-800 font-bold underline underline-offset-8"}`}
+              to="/"
+              onClick={() => handleItemClick("Home")}
+            >
+              Home
+            </NavLink>
+          </div>
+
+          <div>
+            <NavLink
+              className={({isActive}) => `hover:text-red-800 ${isActive && "text-red-800 font-bold underline underline-offset-8"}`}
               to={"/about-us"}
               onClick={() => handleItemClick("About")}
             >
               About
-            </Link>
+            </NavLink>
           </div>
           <div className="dropdown">
             <Link
@@ -121,6 +136,16 @@ const Navbar = () => {
             </div>
           </div>
           <div>
+            <NavLink
+              className={({isActive}) => `hover:text-red-800 ${isActive && "text-red-800 font-bold underline underline-offset-8"}`}
+              to={"/team"}
+              onClick={() => handleItemClick("Team")}
+            >
+              Our Team
+            </NavLink>
+          </div>
+
+          <div>
             <a
               className={`hover:text-red-800 ${
                 activeLink === "Contact Us"
@@ -133,6 +158,7 @@ const Navbar = () => {
               Contact Us
             </a>
           </div>
+
           <div>
             <a
               className={`hover:text-red-800 ${
@@ -146,6 +172,7 @@ const Navbar = () => {
               Join Us
             </a>
           </div>
+          
         </div>
         <div ref={dummyRef}></div>
       </div>

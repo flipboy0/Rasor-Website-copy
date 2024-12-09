@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AboutUs from './pages/AboutUs';
 import Events from './pages/Events';
 import SubEvent from './pages/SubEvent';
+import Team from './pages/Team';
 
 function App() {
   useEffect(() => {
@@ -36,6 +37,7 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/events" element={<Events />} />
         <Route path="/event/:eventId" element={<SubEvent />} />
+        <Route path="/team" element={<Team />} />
       </Routes>
       <Footer />
     </BrowserRouter>
