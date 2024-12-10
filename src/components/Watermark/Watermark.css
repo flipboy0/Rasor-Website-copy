@@ -1,0 +1,16 @@
+.watermark-container {
+    position: relative;
+  }
+  
+  .watermark-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 5em; /* Adjust as needed */
+    color: rgba(0, 0, 0, 0.05); /* Light color for watermark effect */
+    z-index: -1; /* Ensure it is behind other content */
+    text-align: center; /* Center the text */
+    pointer-events: none; /* Make sure it's not interactable */
+  }
+  

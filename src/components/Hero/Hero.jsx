@@ -88,7 +88,7 @@ function ScrollSection() {
     });
   }, {});
   return (
-    <><Navbar/>
+    <>
     <div ref={triggerRef} className="gallery flex flex-row justify-around w-full bg-white ">
       <div className="flex flex-col w-2/5 text-black font-semibold self-center mx-[5vw]">
         <div ref={textbox1} className="h-[30vh] mt-[20vh]" >

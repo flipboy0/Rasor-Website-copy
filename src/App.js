@@ -1,8 +1,14 @@
 import './App.css';
 import Footer from './components/Footer/Footer';
+import Navbar from './components/Navbar/Nvbar';
 import Home from './pages/Home';
 import JoinUs from './components/Join Us/JoinUs';
 import { useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import AboutUs from './pages/AboutUs';
+import Events from './pages/Events';
+import SubEvent from './pages/SubEvent';
+import Team from './pages/Team';
 
 function App() {
   useEffect(() => {
@@ -25,9 +31,19 @@ function App() {
   
   return (
    <> 
-    <Home />
-    <Footer />
-    <JoinUs />
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/event/:eventId" element={<SubEvent />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/Join Us" element={<JoinUs />} />
+      </Routes>
+      <JoinUs />
+      <Footer />
+    </BrowserRouter>
    </>
   );
 }

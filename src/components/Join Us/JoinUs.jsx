@@ -63,29 +63,6 @@ export default function JoinUs() {
           />
         </div>
 
-        <div className="form-group">
-          <label htmlFor="rollNumber">Roll Number</label>
-          <input
-            type="text"
-            id="rollNumber"
-            name="rollNumber"
-            value={formData.rollNumber}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="department">Department</label>
-          <input
-            type="text"
-            id="department"
-            name="department"
-            value={formData.department}
-            onChange={handleChange}
-            required
-          />
-        </div>
 
         <div className="form-group">
           <label htmlFor="levelInDegree">Level in Degree</label>
