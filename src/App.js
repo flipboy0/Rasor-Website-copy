@@ -1,6 +1,7 @@
 import './App.css';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home';
+import JoinUs from './components/Join Us/JoinUs';
 import { useEffect } from 'react';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
    <> 
     <Home />
     <Footer />
+    <JoinUs />
    </>
   );
 }
