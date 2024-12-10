@@ -65,17 +65,21 @@ export default function JoinUs() {
 
 
         <div className="form-group">
-          <label htmlFor="levelInDegree">Level in Degree</label>
-          <input
-            type="text"
+          <label htmlFor="Level in Degree">Year of Study</label>
+          <select
             id="levelInDegree"
             name="levelInDegree"
             value={formData.levelInDegree}
             onChange={handleChange}
             required
-          />
+          >
+            <option value="">Select Year</option>
+            <option value="1">Foundation</option>
+            <option value="2">Diploma</option>
+            <option value="3">Degree(BSc)</option>
+            <option value="4">Degree(BS)</option>
+          </select>
         </div>
-
         <div className="form-group">
           <label htmlFor="whyJoin">Why do you want to join the society?</label>
           <textarea
@@ -88,11 +92,6 @@ export default function JoinUs() {
           />
         </div>
 
-        <div className="google-form-link">
-          <a href="https://forms.gle/your-google-form-link" target="_blank" rel="noopener noreferrer">
-            Click here to fill the form
-          </a>
-        </div>
         <Button type="submit">Submit Application</Button>
       </form>
     </div>
