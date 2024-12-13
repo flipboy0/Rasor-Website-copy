@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AboutUs from './pages/AboutUs';
 import Events from './pages/Events';
+import ContactUs from './components/ContactUs/ContactUs';
 import SubEvent from './pages/SubEvent';
 import Team from './pages/Team';
 
@@ -41,6 +42,7 @@ function App() {
         <Route path="/team" element={<Team />} />
         <Route path="/Join Us" element={<JoinUs />} />
       </Routes>
+      <ContactUs />
       <JoinUs />
       <Footer />
     </BrowserRouter>
