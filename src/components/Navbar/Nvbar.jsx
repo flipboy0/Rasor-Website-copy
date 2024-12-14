@@ -3,8 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import "./Navbar.css";
-import { NavLink } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Navbar = () => {
   const NavRef = useRef(null);
@@ -146,31 +145,23 @@ const Navbar = () => {
           </div>
 
           <div>
-            <a
-              className={`hover:text-red-800 ${
-                activeLink === "Contact Us"
-                  ? "text-red-800 font-bold underline underline-offset-8"
-                  : ""
-              }`}
-              href="example.com"
+            <NavLink
+              className={({isActive}) => `hover:text-red-800 ${isActive && "text-red-800 font-bold underline underline-offset-8"}`}
+              to={"/contact"}
               onClick={() => handleItemClick("Contact Us")}
             >
               Contact Us
-            </a>
+            </NavLink>
           </div>
 
           <div>
-            <a
-              className={`hover:text-red-800 ${
-                activeLink === "Join Us"
-                  ? "text-red-800 font-bold underline underline-offset-8 "
-                  : ""
-              }`}
-              href="example.com"
+            <NavLink
+              className={({isActive}) => `hover:text-red-800 ${isActive && "text-red-800 font-bold underline underline-offset-8"}`}
+              to={"/join"}
               onClick={() => handleItemClick("Join Us")}
             >
               Join Us
-            </a>
+            </NavLink>
           </div>
           
         </div>

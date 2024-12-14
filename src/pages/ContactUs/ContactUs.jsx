@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './ContactUs.css';
 import { FaLinkedin, FaYoutube, FaInstagram } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-import Watermark from '../Watermark/Watermark';
+import Watermark from '../../components/Watermark/Watermark';
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
